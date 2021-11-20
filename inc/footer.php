@@ -1,6 +1,6 @@
 <footer class="footer-main bg-dark">
     <div class="container-fluid ">
-        <a href="index.html" class="mb-4 d-block">
+        <a href="index.php" class="mb-4 d-block">
             <img src="images/product/logo-fitfood.png" alt="" border="0" />
         </a>
         <div class="widget-footer mb-4">

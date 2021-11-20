@@ -12,13 +12,13 @@ include './inc/header.php'
                         <div class="article mb-4">
                             <div class="row">
                                 <div class="col-md-3 col-xl-2 mb-2">
-                                    <a href="article1.html" class="thumb">
+                                    <a href="article1.php" class="thumb">
                                         <img src="images/product/120x0/article-1.jpg" class="img-fluid">
                                     </a>
                                 </div>
                                 <div class="col-md-9 col-xl-10">
                                     <div class="d-flex flex-column flex-lg-row justify-content-between">
-                                        <h3 class="title"><a href="article1.html">Fitfood
+                                        <h3 class="title"><a href="article1.php">Fitfood
                                                 VN hợp tác cùng H&amp;H Nutrition ra mắt &quot;Gói tư vấn dinh dưỡng
                                                 chuyên sâu&quot;</a></h3>
                                         <p class="meta">20/11/2020</p>
