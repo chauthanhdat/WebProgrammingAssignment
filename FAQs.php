@@ -1,69 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php
+include './inc/header.php'
+?>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="lang" content="vi">
-    <title>Fitfood VN</title>
-    <link rel="icon" href="/favicon.ico">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700" rel="stylesheet">
-    <script src="js/jquery-3.6.0.min.js"></script>
-
-    <link rel="stylesheet" href="css/jquery.bxslider.min.css">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/style.css">
-
-
-
-</head>
-
-<body>
-    <nav class="navbar navbar-expand-xl navbar-dark bg-dark fixed-top">
-        <div class="container-fluid">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-navigation"
-                aria-controls="main-navigation" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <a class="navbar-brand " href="index.html"><img src="images/product/logo-fitfood.png" alt="" /></a>
-
-
-            <div class="collapse navbar-collapse " id="main-navigation">
-                <ul class="nav navbar-nav mr-auto ml-xl-auto order-2 order-xl-0">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html">
-                            Trang chủ
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="order.html">
-                            Đặt hàng
-                        </a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class=" nav-link" href="news.html">
-                            Tin tức
-                        </a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="active nav-link" href="FAQs.html">
-                            FAQs
-                        </a>
-                    </li>
-                </ul>
-                <ul class="nav navbar-nav navbar-sub order-1 order-xl-0">
-                    <!-- Chưa đăng nhập -->
-                    <li class="nav-item"><a id="btn-register" class="nav-link">Đăng ký</a></li>
-                    <li class="nav-item"><a id="btn-login" class="nav-link">Đăng nhập</a></li>
-                </ul>
-            </div>
-        </div>
-
-    </nav>
-    main class="">
+<main class="">
     <section class="top-inner">
         <div class="container">
             <div class="row">
@@ -75,8 +14,7 @@
                         <div class="card mb-4">
                             <div class="card-header" id="headingOne">
                                 <h2 class="mb-0">
-                                    <button class="btn btn-link " type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#collapse-0" aria-expanded="true" aria-controls="collapse-0">
+                                    <button class="btn btn-link " type="button" data-bs-toggle="collapse" data-bs-target="#collapse-0" aria-expanded="true" aria-controls="collapse-0">
                                         Mô hình của Fitfood là gì?
                                     </button>
                                 </h2>
@@ -107,8 +45,7 @@
                         <div class="card mb-4">
                             <div class="card-header" id="headingOne">
                                 <h2 class="mb-0">
-                                    <button class="btn btn-link collapsed" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#collapse-1" aria-expanded="true" aria-controls="collapse-1">
+                                    <button class="btn btn-link collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-1" aria-expanded="true" aria-controls="collapse-1">
                                         Cách đặt hàng như thế nào?
                                     </button>
                                 </h2>
@@ -125,7 +62,8 @@
                                     <p>Sau khi ho&agrave;n tất,&nbsp;một email x&aacute;c nhận sẽ được tự động gửi
                                         v&agrave;o email bạn đăng k&yacute;. Bạn vui l&ograve;ng kiểm tra thư mục SPAM
                                         nếu bạn kh&ocirc;ng nhận được email,&nbsp;Bạn lưu &yacute; l&agrave; Fitfood
-                                        <em>kh&ocirc;ng gọi điện </em>x&aacute;c nhận nha.&nbsp;</p>
+                                        <em>kh&ocirc;ng gọi điện </em>x&aacute;c nhận nha.&nbsp;
+                                    </p>
 
                                     <p>Đặc biệt từ nay bạn đ&atilde; c&oacute; thể tự chọn m&oacute;n y&ecirc;u
                                         th&iacute;ch của m&igrave;nh trong g&oacute;i ăn. Chỉ cần nhấn v&agrave;o
@@ -141,8 +79,7 @@
                         <div class="card mb-4">
                             <div class="card-header" id="headingOne">
                                 <h2 class="mb-0">
-                                    <button class="btn btn-link collapsed" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#collapse-2" aria-expanded="true" aria-controls="collapse-2">
+                                    <button class="btn btn-link collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-2" aria-expanded="true" aria-controls="collapse-2">
                                         Các lưu ý khi sử dụng Fitfood
                                     </button>
                                 </h2>
@@ -168,7 +105,8 @@
                                         n&ecirc;n an to&agrave;n sử dụng trong l&ograve; vi s&oacute;ng ạ.&nbsp;Tuy
                                         nhi&ecirc;n, đối với&nbsp;hủ sốt m&agrave;u trắng, bạn vui l&ograve;ng
                                         <strong><em>bỏ nắp ra</em> </strong>v&igrave; nắp nhựa trong kh&ocirc;ng
-                                        d&ugrave;ng được trong l&ograve; vi s&oacute;ng.</p>
+                                        d&ugrave;ng được trong l&ograve; vi s&oacute;ng.
+                                    </p>
 
                                     <p>Đối với c&aacute;c kh&aacute;ch kh&ocirc;ng c&oacute; tủ lạnh hoặc kh&ocirc;ng
                                         h&acirc;m n&oacute;ng bằng L&ograve; Vi S&oacute;ng, Fitfood kh&ocirc;ng đảm bảo
@@ -179,8 +117,7 @@
                         <div class="card mb-4">
                             <div class="card-header" id="headingOne">
                                 <h2 class="mb-0">
-                                    <button class="btn btn-link collapsed" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#collapse-3" aria-expanded="true" aria-controls="collapse-3">
+                                    <button class="btn btn-link collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-3" aria-expanded="true" aria-controls="collapse-3">
                                         Phần ăn Fitfood có gì đặc biệt
                                     </button>
                                 </h2>
@@ -211,8 +148,7 @@
                         <div class="card mb-4">
                             <div class="card-header" id="headingOne">
                                 <h2 class="mb-0">
-                                    <button class="btn btn-link collapsed" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#collapse-4" aria-expanded="true" aria-controls="collapse-4">
+                                    <button class="btn btn-link collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-4" aria-expanded="true" aria-controls="collapse-4">
                                         Muốn đặt GÓI THÁNG thì như thế nào?
                                     </button>
                                 </h2>
@@ -228,7 +164,8 @@
                                         <strong>phần NOTE</strong> ở trang thanh to&aacute;n l&agrave;
                                         &quot;<strong>order g&oacute;i th&aacute;ng</strong>&quot;.&nbsp;Đến ng&agrave;y
                                         giao h&agrave;ng đầu ti&ecirc;n shipper sẽ giao đồ ăn v&agrave; gửi bill
-                                        th&aacute;ng đ&atilde; giảm 10% cho bạn.</p>
+                                        th&aacute;ng đ&atilde; giảm 10% cho bạn.
+                                    </p>
 
                                     <p><em>* Bạn lưu &yacute; gi&uacute;p Fitfood về một số ch&iacute;nh s&aacute;ch đối
                                             với G&Oacute;I TH&Aacute;NG nha:</em><br />
@@ -252,8 +189,7 @@
                         <div class="card mb-4">
                             <div class="card-header" id="headingOne">
                                 <h2 class="mb-0">
-                                    <button class="btn btn-link collapsed" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#collapse-5" aria-expanded="true" aria-controls="collapse-5">
+                                    <button class="btn btn-link collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-5" aria-expanded="true" aria-controls="collapse-5">
                                         Thức ăn Fitfood nhạt quá, phải làm sao?
                                     </button>
                                 </h2>
@@ -283,8 +219,7 @@
                         <div class="card mb-4">
                             <div class="card-header" id="headingOne">
                                 <h2 class="mb-0">
-                                    <button class="btn btn-link collapsed" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#collapse-6" aria-expanded="true" aria-controls="collapse-6">
+                                    <button class="btn btn-link collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-6" aria-expanded="true" aria-controls="collapse-6">
                                         Ăn bao lâu và ăn gói nào để giảm cân?
                                     </button>
                                 </h2>
@@ -325,8 +260,7 @@
                         <div class="card mb-4">
                             <div class="card-header" id="headingOne">
                                 <h2 class="mb-0">
-                                    <button class="btn btn-link collapsed" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#collapse-7" aria-expanded="true" aria-controls="collapse-7">
+                                    <button class="btn btn-link collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-7" aria-expanded="true" aria-controls="collapse-7">
                                         Fitfood thải ra nhựa nhiều quá?
                                     </button>
                                 </h2>
@@ -371,8 +305,7 @@
                         <div class="card mb-4">
                             <div class="card-header" id="headingOne">
                                 <h2 class="mb-0">
-                                    <button class="btn btn-link collapsed" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#collapse-8" aria-expanded="true" aria-controls="collapse-8">
+                                    <button class="btn btn-link collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-8" aria-expanded="true" aria-controls="collapse-8">
                                         Fitfood có phải là lowcarb?
                                     </button>
                                 </h2>
@@ -417,8 +350,7 @@
                         <div class="card mb-4">
                             <div class="card-header" id="headingOne">
                                 <h2 class="mb-0">
-                                    <button class="btn btn-link collapsed" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#collapse-9" aria-expanded="true" aria-controls="collapse-9">
+                                    <button class="btn btn-link collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-9" aria-expanded="true" aria-controls="collapse-9">
                                         Tại sao lại giao phần ăn cấp đông?
                                     </button>
                                 </h2>
@@ -450,70 +382,8 @@
             </div>
         </div>
     </section>
-    </main>
+</main>
 
-    <footer class="footer-main bg-dark">
-        <div class="container-fluid ">
-            <a href="index.html" class="mb-4 d-block">
-                <img src="images/product/logo-fitfood.png" alt="" border="0" />
-            </a>
-            <div class="widget-footer mb-4">
-                <div class="row">
-                    <div class="col-md-6 mb-3">
-                        <h4>Công ty TNHH Fitfood</h4>
-                        <p>
-                            <strong>Địa chỉ</strong> 33 Đường 14, KDC Bình Hưng, Ấp 2, Huyện Bình Chánh, TPHCM<br />
-                            <strong>Điện thoại</strong> (+84) 932 788 120 [hotline] - (+84) 938 074 120 [sms]<br />
-                            <strong>Email</strong> info@fitfood.vn. For business inquiries:
-                            business@fitfood.vn<br />
-                            <strong>MST</strong> 0313272749 do Sở kế hoạch và đầu tư TPHCM cấp ngày 26/05/2015
-                        </p>
-                    </div>
-                    <div class="col-md-3 mb-3">
-                        <h4>Điều khoản chung</h4>
-                        <ul>
-                            <li><a href="#">Chính Sách Quy Định Chung</a></li>
-                            <li><a href="#">Quy Định Hình Thức Thanh Toán</a></li>
-                            <li><a href="#">Chính Sách Vận Chuyển Giao Hàng</a></li>
-                            <li><a href="#">Chính Sách Bảo Mật Thông Tin</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-md-3 mb-3">
-                        <h4>Follow us</h4>
-                        <div class="social mb-3">
-                            <a href="#" target="_blank">
-                                <img src="images/product/ic-fb.png" alt="" border="0" />
-                            </a>
-                            <a href="#" target="_blank">
-                                <img src="images/product/ic-instagram.png" alt="" border="0" />
-                            </a>
-                            <a href="#" target="_blank">
-                                <img src="images/product/ic-youtube.png" alt="" border="0" />
-                            </a>
-                        </div>
-                        <div>
-                            <a href="http://online.gov.vn/HomePage/CustomWebsiteDisplay.aspx?DocId=34289">
-                                <img src="images/product/logo-bocongthuong.png" alt="" border="0" width="120px" />
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <p class="copyright mb-0">© Copyright Fitfood.</p>
-        </div>
-    </footer>
-
-
-    <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/jquery.bxslider.min.js"></script>
-    <script src="js/jquery.cookie.js"></script>
-    <script src="js/main.js"></script>
-
-
-
-
-
-
-</body>
-
-</html>
+<?php
+include './inc/footer.php'
+?>
