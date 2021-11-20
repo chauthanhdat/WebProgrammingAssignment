@@ -21,13 +21,13 @@
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-navigation" aria-controls="main-navigation" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <a class="navbar-brand " href="index.html"><img src="images/product/logo-fitfood.png" alt="" /></a>
+            <a class="navbar-brand " href="index.php"><img src="images/product/logo-fitfood.png" alt="" /></a>
 
 
             <div class="collapse navbar-collapse " id="main-navigation">
                 <ul class="nav navbar-nav mr-auto ml-xl-auto order-2 order-xl-0">
                     <li class="nav-item">
-                        <a class="active nav-link" href="index.html">
+                        <a class="active nav-link" href="index.php">
                             Trang chủ
                         </a>
                     </li>
@@ -38,13 +38,13 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="news.html">
+                        <a class="nav-link" href="news.php">
                             Tin tức
                         </a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="FAQs.html">
+                        <a class="nav-link" href="FAQs.php">
                             FAQs
                         </a>
                     </li>
