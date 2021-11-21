@@ -1,3 +1,12 @@
+$(function(){
+    var current = location.pathname.split("/")[1];
+    $('nav li a').each(function(){
+        var $this = $(this);
+        if($this.attr('href').indexOf(current) !== -1){
+            $this.addClass('active');
+        }
+    })
+})   
 $(document).ready(function () {
     slideProduct();
     function slideProduct(){
@@ -84,6 +93,6 @@ $(document).ready(function () {
             speed: 500
         });
     }
-
+    
     
 });
