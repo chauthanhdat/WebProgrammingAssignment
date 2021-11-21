@@ -39,6 +39,35 @@
       margin-left: 1.5rem;
     }
   }
+  /*footer*/
+  .footer {
+    font-size: 0.7rem;
+    color: #FFFFFF;
+    padding-top: 6rem;
+  }
+  .footer h4 {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: #FF2033;
+  }
+  .footer ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+  .footer a {
+    color:#686868;;
+    text-decoration: none;
+  }
+  .footer a:hover {
+    text-decoration: underline;
+  }
+  .footer .social a:hover {
+    text-decoration: none;
+  }
+  .footer .social a:hover img {
+    opacity: 0.75;
+  }
   /*top-inner*/
   .top-inner {
     padding: 8.5rem 0;
@@ -137,19 +166,13 @@
   }
   
   .bx-wrapper .bx-next {
-    right: -5rem;
-    background-position: 0 0;
-    background-image: url("/images/product/next.png");
+    right: -5rem !important;
+    background-position: 0 0 !important;
+    background-image: url("/images/product/next.png")!important;
     background-size:contain;
     background-repeat: no-repeat;
   }
-  .bx-wrapper .bx-next:hover {
-    right: -5rem;
-    background-position: 0 0;
-    background-image: url("/images/product/next.png");
-    background-size:contain;
-    background-repeat: no-repeat;
-  }
+
  
   
   @media (min-width: 1200px) {
@@ -186,24 +209,9 @@
     display: block;
     position: relative;
     color: #686868;
+    text-decoration: none;
   }
-  .products a.link .icon {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    position: absolute;
-    top: -20px;
-    right: -20px;
-    z-index: 99;
-    text-align: center;
-    line-height: 40px;
-    display: none;
-    background: #fff;
-  }
-  .products a.link .icon .fa {
-    font-size: 20px;
-    color: #FF2033;
-  }
+  
   @media (min-width: 1200px) {
     .products a.link:before {
       display: block;
@@ -219,15 +227,12 @@
     }
   }
   .products a.link:hover {
-    text-decoration: none;
+    text-decoration: underline;
   }
   @media (min-width: 1200px) {
     .products a.link:hover:before {
       background: rgba(0, 0, 0, 0.6);
       border: 2px solid #FFFFFF;
-    }
-    .products a.link:hover .icon {
-      display: block;
     }
   }
   .products .card {
@@ -251,7 +256,7 @@
   }
   .products .card .card-body .card-title span {
     line-height: 1rem;
-    font-size: 0.875rem;
+    font-size: 0.9rem;
     color: #FF2033;
   }
   .products .card .card-body .card-text {
@@ -259,9 +264,13 @@
   }
   .products .card .card-body .btn {
     line-height: 1rem;
-    font-size: 0.875rem;
+    font-size: 0.9rem;
     padding: 7px 0;
     width: 110px;
+  }
+  .environmental .item img {
+    width: 100%;
+    margin-bottom: 20px;
   }
   /*partners*/
   .partners img {
