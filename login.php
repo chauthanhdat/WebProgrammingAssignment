@@ -65,7 +65,7 @@
             //sleep(10);
             // header("Location:login.php");
         }else{
-            header('Location: index.html');
+            header('Location: index.php');
             unset($_POST);
         }
 
@@ -77,6 +77,9 @@
 
 ?>
 
+<?php
+//include './inc/header.php'
+?>
 
 
 <!doctype html>
@@ -91,8 +94,7 @@
 <body>
 
       <div class="p-2 bg-dark text-white text-center">
-        <!-- <h1>My First Bootstrap 5 Page</h1>
-        <p>Resize this responsive page to see the effect!</p> -->
+        
         <a href="index.php"><img alt="fitfood" src="https://fitfood.vn/images/logo-fitfood.png"></a>
         
        

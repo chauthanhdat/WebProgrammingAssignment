@@ -51,8 +51,8 @@
                 </ul>
                 <ul class="nav navbar-nav navbar-sub order-1 order-xl-0">
                     <!-- Chưa đăng nhập -->
-                    <li class="nav-item"><a id="btn-register" class="nav-link">Đăng ký</a></li>
-                    <li class="nav-item"><a id="btn-login" class="nav-link">Đăng nhập</a></li>
+                    <li class="nav-item"><a id="btn-register" class="nav-link" href="./register.php">Đăng ký</a></li>
+                    <li class="nav-item"><a id="btn-login" class="nav-link" href="./login.php">Đăng nhập</a></li>
                 </ul>
             </div>
         </div>
