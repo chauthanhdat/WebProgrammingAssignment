@@ -3,12 +3,12 @@
     if(!isset($_SESSION['Login'])){
         $_SESSION['Login']=false;
     }
-    if(!isset($_SESSION['NumofLogin'])){
-        $_SESSION['NumofLogin']=0;
-    }
-    else{
-        $_SESSION['NumofLogin']+=1;
-    }
+    // if(!isset($_SESSION['NumofLogin'])){
+    //     $_SESSION['NumofLogin']=0;
+    // }
+    // else{
+    //     $_SESSION['NumofLogin']+=1;
+    // }
     // elseif(isset($_SESSION['Login'])&&(!$_SESSION['Login'])){
     //     echo '<script>document.getElementById("passnotright").innerHTML="Sai Mật Khẩu";</script>';
     // }
@@ -48,7 +48,7 @@
                     $_SESSION['UserPhone']=$row['ur_phone'];
                     $_SESSION['Login']=true;
                     $loginsuccess=true;
-                    unset($_SESSION['NumofLogin']);
+                    //unset($_SESSION['NumofLogin']);
                     break;
 
                 }
@@ -57,15 +57,16 @@
 
          // Close connection
          mysqli_close($connection);
-         unset($_POST);
+         
 
         if(!$loginsuccess){ // tài khoản không tồn tại
             $_SESSION['Login']=false;
             //echo "<script> alert('Thông tin đăng nhập không chính xác vui long nhập lại'); </script>";
             //sleep(10);
-            header("Location:login.php");
+            // header("Location:login.php");
         }else{
             header('Location: index.html');
+            unset($_POST);
         }
 
         
@@ -101,11 +102,9 @@
         <p class="text-center small text-secondary">Nếu Bạn chưa có tài khoản. Vui lòng <a class="text-danger" href="./register.php"><strong>Đăng ký</strong></a> để tiếp tục</p>
         <hr color="black" width="50%">
         <p id="passnotright"></p>
-        <?php 
-            if(isset($_SESSION['Login'])&&(!$_SESSION['Login'])&&($_SESSION['NumofLogin'])>0){
-                echo '<script>document.getElementById("passnotright").innerHTML="Sai Mật Khẩu";</script>';
-            }
-        ?>
+        <?php if(!$_SESSION['Login'] && isset($_POST['username'])){
+            echo '<script>document.getElementById("passnotright").innerHTML="* Sai mật khẩu";</script>';
+        }?>
         <form action="<?php echo $_SERVER["PHP_SELF"];?>" method="post" onsubmit="return loginFrontmat()" name="loginForm">
           <div class="mb-3 mt-3">
             <label for="username" class="mb-2">Tài khoản:</label>
