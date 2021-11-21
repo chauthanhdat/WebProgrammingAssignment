@@ -109,12 +109,12 @@
         <form action="<?php echo $_SERVER["PHP_SELF"];?>" method="post" onsubmit="return loginFrontmat()" name="loginForm">
           <div class="mb-3 mt-3">
             <label for="username" class="mb-2">Tài khoản:</label>
-            <input type="text" class="form-control" id="username" placeholder="Enter username" name="username">
+            <input type="text" class="form-control" id="username" placeholder="Enter username" name="username" value="<?php if(isset($_POST['username'])){ echo htmlentities($_POST['username']);} ?>">
           </div>
             <p class="small text-danger" id="accwrongmessage"></p>
           <div class="mb-3">
             <label for="pwd" class="mb-2">Mật khẩu:</label>
-            <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="userpassword">
+            <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="userpassword" value="<?php if(isset($_POST['userpassword'])){ echo htmlentities($_POST['userpassword']);} ?>">
           </div>
           <p class="small text-danger" id="passwrongmessage"></p>
 
