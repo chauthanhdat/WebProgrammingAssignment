@@ -52,24 +52,8 @@ if (isset($_POST['submit'])) {
         }
     }
 
-<<<<<<< HEAD
-         // Close connection
-         mysqli_close($connection);
-         
-
-        if(!$loginsuccess){ // tài khoản không tồn tại
-            $_SESSION['Login']=false;
-            //echo "<script> alert('Thông tin đăng nhập không chính xác vui long nhập lại'); </script>";
-            //sleep(10);
-            // header("Location:login.php");
-        }else{
-            header('Location: index.php');
-            unset($_POST);
-        }
-=======
     // Close connection
     mysqli_close($connection);
->>>>>>> dev
 
 
     if (!$loginsuccess) { // tài khoản không tồn tại
@@ -88,50 +72,6 @@ if (isset($_POST['submit'])) {
 ?>
 
 <?php
-<<<<<<< HEAD
-//include './inc/header.php'
-?>
-
-
-<!doctype html>
-<html lang="en">
-<head>
-    <title>Đăng Nhập-fitfood</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-</head>
-<body>
-
-      <div class="p-2 bg-dark text-white text-center">
-        
-        <a href="index.php"><img alt="fitfood" src="https://fitfood.vn/images/logo-fitfood.png"></a>
-        
-       
-      </div>
-      <div class="container mt-3 col-md-8">
-        <h2 class="text-center">Đăng Nhập</h2>
-        <p class="text-center small text-secondary">Nếu Bạn chưa có tài khoản. Vui lòng <a class="text-danger" href="./register.php"><strong>Đăng ký</strong></a> để tiếp tục</p>
-        <hr color="black" width="50%">
-        <p id="passnotright"></p>
-        <?php if(!$_SESSION['Login'] && isset($_POST['username'])){
-            echo '<script>document.getElementById("passnotright").innerHTML="* Sai mật khẩu";</script>';
-        }?>
-        <form action="<?php echo $_SERVER["PHP_SELF"];?>" method="post" onsubmit="return loginFrontmat()" name="loginForm">
-          <div class="mb-3 mt-3">
-            <label for="username" class="mb-2">Tài khoản:</label>
-            <input type="text" class="form-control" id="username" placeholder="Enter username" name="username" value="<?php if(isset($_POST['username'])){ echo htmlentities($_POST['username']);} ?>">
-          </div>
-            <p class="small text-danger" id="accwrongmessage"></p>
-          <div class="mb-3">
-            <label for="pwd" class="mb-2">Mật khẩu:</label>
-            <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="userpassword" value="<?php if(isset($_POST['userpassword'])){ echo htmlentities($_POST['userpassword']);} ?>">
-          </div>
-          <p class="small text-danger" id="passwrongmessage"></p>
-
-          <button type="submit" name="submit" class="btn btn-primary">Đăng nhập</button>
-=======
 include './inc/header.php'
 ?>
 
@@ -160,7 +100,6 @@ include './inc/header.php'
             <p class="small text-danger" id="passwrongmessage"></p>
 
             <button type="submit" name="submit" class="btn btn-danger">Đăng nhập</button>
->>>>>>> dev
         </form>
     </div>
 </div>
