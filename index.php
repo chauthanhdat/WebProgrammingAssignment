@@ -2,7 +2,7 @@
 include './inc/header.php'
 ?>
 
-<main role="main">
+<div class="main" role="main">
     <!-- main slider -->
     <div id="main-banner" class="carousel slide" data-bs-ride="carousel">
         <ol class="carousel-indicators">
@@ -90,7 +90,7 @@ include './inc/header.php'
                     <div class="row">
                         <div class="col-md-6 col-lg-3 mb-3">
                             <div class="item">
-
+                                <i class="fal fa-ballot-check"></i>
                                 <h5>Chọn Gói Ăn</h5>
                                 <p>Chọn gói ăn phù hợp với nhu cầu của bạn và điền đầy đủ thông tin giao hàng
                                 </p>
@@ -98,7 +98,7 @@ include './inc/header.php'
                         </div>
                         <div class="col-md-6 col-lg-3 mb-3">
                             <div class="item">
-
+                                <i class="fal fa-mitten"></i>
                                 <h5>Fitfood nấu</h5>
                                 <p>Chúng tôi lựa chọn những nguyên liệu tốt nhất và nấu trong bếp công nghiệp
                                     hiện
@@ -107,7 +107,7 @@ include './inc/header.php'
                         </div>
                         <div class="col-md-6 col-lg-3 mb-3">
                             <div class="item">
-
+                                <i class="fal fa-shipping-fast"></i>
                                 <h5>Giao hàng</h5>
                                 <p>Đội ngũ giao hàng của Fitfood sẽ giao tận nơi các phần ăn cho bạn mỗi ngày
                                 </p>
@@ -115,7 +115,7 @@ include './inc/header.php'
                         </div>
                         <div class="col-md-6 col-lg-3 mb-3">
                             <div class="item">
-
+                                <i class="fal fa-utensils"></i>
                                 <h5>Thưởng thức</h5>
                                 <p>Không cần suy nghĩ, shopping hay nấu nướng dầu mỡ, chỉ cần hâm và thưởng
                                     thức!
@@ -128,16 +128,15 @@ include './inc/header.php'
         </div>
     </section>
     <!-- featured product -->
-    <section class="featured-product">
-        <div class="container">
-            <h2 class="title title-center pb-4 mb-4">Sản phẩm tiêu biểu</h2>
-            <p class="des mb-5">Fitfood cung cấp nhiều gói ăn và thực phẩm dùng kèm đa dạng phù hợp với mọi nhu
-                cầu
-                của bạn</p>
+    <section class="featured-product bg-danger">
+        <div class="container-fluid">
+            <h2 class="title title-center pb-4 mb-4 text-white">Sản phẩm tiêu biểu</h2>
+            <p class="des mb-5 text-center text-white">Fitfood cung cấp nhiều gói ăn và thực phẩm dùng kèm đa dạng phù hợp với mọi nhu
+                cầu của bạn</p>
             <div class="products">
                 <ul class="bxslider">
                     <li>
-                        <a href="https://fitfood.vn/product/full" class="link">
+                        <a href="https://fitfood.vn/product/full" class="link ">
                             <div class="card">
                                 <img src="images/product/500x315/full.jpg" class="card-img-top" alt="">
                                 <div class="card-body">
@@ -147,15 +146,13 @@ include './inc/header.php'
                                     <p class="card-text">Gói SÁNG - TRƯA - TỐI. Ăn cả ngày phù hợp cho người bận
                                         rộn
                                     </p>
-
                                 </div>
                             </div>
                         </a>
                     </li>
                     <li>
                         <a href="https://fitfood.vn/product/fit3" class="link">
-
-                            <div class="card">
+                               <div class="card">
                                 <img src="images/product/500x315/fit3.jpg" class="card-img-top" alt="">
                                 <div class="card-body">
                                     <h5 class="card-title d-flex justify-content-between">Gói FIT 3
@@ -171,6 +168,7 @@ include './inc/header.php'
                     </li>
                     <li>
                         <a href="https://fitfood.vn/product/fit1" class="link">
+                            
                             <div class="card">
                                 <img src="images/product/500x315/fit1.jpg" class="card-img-top" alt="">
                                 <div class="card-body">
@@ -187,6 +185,7 @@ include './inc/header.php'
                     </li>
                     <li>
                         <a href="https://fitfood.vn/product/fit2" class="link">
+                            
                             <div class="card">
                                 <img src="images/product/500x315/fit2.jpg" class="card-img-top" alt="">
                                 <div class="card-body">
@@ -196,13 +195,13 @@ include './inc/header.php'
                                     <p class="card-text">Gói SÁNG - TỐi. Ăn trưa cùng bạn bè đồng nghiệp văn
                                         phòng
                                     </p>
-
                                 </div>
                             </div>
                         </a>
                     </li>
                     <li>
                         <a href="https://fitfood.vn/product/meat-s" class="link">
+
                             <div class="card">
                                 <img src="images/product/500x315/meat-s.jpg" class="card-img-top" alt="">
                                 <div class="card-body">
@@ -219,6 +218,7 @@ include './inc/header.php'
                     </li>
                     <li>
                         <a href="https://fitfood.vn/product/meat" class="link">
+
                             <div class="card">
                                 <img src="images/product/500x315/meat.jpg" class="card-img-top" alt="">
                                 <div class="card-body">
@@ -235,6 +235,7 @@ include './inc/header.php'
                     </li>
                     <li>
                         <a href="https://fitfood.vn/product/veg" class="link">
+
                             <div class="card">
                                 <img src="images/product/500x315/veg.jpg" class="card-img-top" alt="">
                                 <div class="card-body">
@@ -256,18 +257,18 @@ include './inc/header.php'
     <section class="environmental">
         <div class="container">
             <h2 class="title title-center pb-4 mb-5">Chung tay bảo vệ Môi trường</h2>
-            <div class="row slider">
+            <div class="row">
                 <div class="col-md-4 item">
                     <img src="images/product/346x248/tui ni long.jfif" alt="" border="0" class="img-fluid" />
-                    <p>Nhà cung cấp duy nhất sử dung túi Nylon sinh học tự hủy thân thiện với môi trường</p>
+                    <p class="text-center">Nhà cung cấp duy nhất sử dung túi Nylon sinh học tự hủy thân thiện với môi trường</p>
                 </div>
                 <div class="col-md-4 item">
                     <img src="images/product/346x248/hop nhua.jfif" alt="" border="0" class="img-fluid" />
-                    <p>Rửa sạch lại hộp nhựa đen để nhận hoàn tiền 10,000 cho mỗi 10 hộp</p>
+                    <p class="text-center">Rửa sạch lại hộp nhựa đen để nhận hoàn tiền 10,000 cho mỗi 10 hộp</p>
                 </div>
                 <div class="col-md-4 item">
                     <img src="images/product/346x248/muong dia.jfif" alt="" border="0" class="img-fluid" />
-                    <p>Fitfood chỉ cung cấp 01 bộ muỗng nĩa mỗi ngày để giảm thiểu rác thải nhựa</p>
+                    <p class="text-center">Fitfood chỉ cung cấp 01 bộ muỗng nĩa mỗi ngày để giảm thiểu rác thải nhựa</p>
                 </div>
             </div>
         </div>
@@ -312,7 +313,7 @@ include './inc/header.php'
             </div>
         </div>
     </section>
-</main>
+</div>
 
 <?php
 include './inc/footer.php'

@@ -2,7 +2,7 @@
 include './inc/header.php'
 ?>
 
-<main class="">
+<div class="main">
     <section class="top-inner">
         <div class="container">
             <div class="row">
@@ -382,7 +382,7 @@ include './inc/header.php'
             </div>
         </div>
     </section>
-</main>
+</div>
 
 <?php
 include './inc/footer.php'

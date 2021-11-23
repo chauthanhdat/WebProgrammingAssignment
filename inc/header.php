@@ -7,12 +7,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="lang" content="vi">
     <title>Fitfood VN</title>
-    <link rel="icon" href="favicon.ico">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700" rel="stylesheet">
-    <script src="js/jquery-3.6.0.min.js"></script>
+    <link rel="icon" href="/images/product/favicon.ico">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+    <link href="fonts/Montserrat.css" rel="stylesheet">
     <link rel="stylesheet" href="css/jquery.bxslider.min.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
+
+
 </head>
 
 <body>
@@ -27,7 +29,7 @@
             <div class="collapse navbar-collapse " id="main-navigation">
                 <ul class="nav navbar-nav mr-auto ml-xl-auto order-2 order-xl-0">
                     <li class="nav-item">
-                        <a class="active nav-link" href="index.php">
+                        <a class="nav-link" href="index.php">
                             Trang chủ
                         </a>
                     </li>
@@ -49,10 +51,21 @@
                         </a>
                     </li>
                 </ul>
-                <ul class="nav navbar-nav navbar-sub order-1 order-xl-0">
+                <ul class="nav navbar-nav navbar-sub order-1 order-xl-0 ">
                     <!-- Chưa đăng nhập -->
-                    <li class="nav-item"><a id="btn-register" class="nav-link">Đăng ký</a></li>
-                    <li class="nav-item"><a id="btn-login" class="nav-link">Đăng nhập</a></li>
+                    <li class="nav-item"><a id="btn-register" class="nav-link" href="./register.php">Đăng ký</a></li>
+                    <li class="nav-item "><a id="btn-login" class="nav-link" href="./login.php">Đăng nhập</a></li>
+                </ul>
+                <!-- Đã đăng nhập -->
+                <ul class="nav navbar-nav navbar-sub flex-row order-1 order-xl-0 d-none">
+                    <li class="user-nav d-flex">
+                        <a href="https://fitfood.vn/profile/account">
+                            <div class="avatar" style="background-image:url();"></div>
+                        </a>
+                        <div>
+                            <br /><a href="https://fitfood.vn/logout">Thoát</a>
+                        </div>
+                    </li>
                 </ul>
             </div>
         </div>
