@@ -1,4 +1,4 @@
-<footer class="footer-main bg-dark">
+<div class="footer bg-dark">
     <div class="container-fluid ">
         <a href="index.php" class="mb-4 d-block">
             <img src="images/product/logo-fitfood.png" alt="" border="0" />
@@ -47,8 +47,9 @@
         </div>
         <p class="copyright mb-0">© Copyright Fitfood.</p>
     </div>
-</footer>
+</div>
 
+<script src="js/jquery-3.6.0.min.js"></script>
 <script src="js/bootstrap.bundle.min.js"></script>
 <script src="js/jquery.bxslider.min.js"></script>
 <script src="js/jquery.cookie.js"></script>
