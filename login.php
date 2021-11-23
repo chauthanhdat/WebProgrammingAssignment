@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php 
     session_start();
     if(!isset($_SESSION['Login'])){
@@ -13,22 +12,6 @@
     // elseif(isset($_SESSION['Login'])&&(!$_SESSION['Login'])){
     //     echo '<script>document.getElementById("passnotright").innerHTML="Sai Mật Khẩu";</script>';
     // }
-=======
-<?php
-session_start();
-if (!isset($_SESSION['Login'])) {
-    $_SESSION['Login'] = false;
-}
-// if(!isset($_SESSION['NumofLogin'])){
-//     $_SESSION['NumofLogin']=0;
-// }
-// else{
-//     $_SESSION['NumofLogin']+=1;
-// }
-// elseif(isset($_SESSION['Login'])&&(!$_SESSION['Login'])){
-//     echo '<script>document.getElementById("passnotright").innerHTML="Sai Mật Khẩu";</script>';
-// }
->>>>>>> dev
 
 ?>
 
