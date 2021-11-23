@@ -28,44 +28,6 @@ if (isset($_POST['submit'])) {
         exit;
     }
 
-<<<<<<< HEAD
-
-<?php 
-   
-    if(isset($_POST['submit'])){
-        $dbservername="localhost";
-        $dbusername="root";
-        $dbname="fitfooddb";
-        $loginsuccess=false;
-        $connection= mysqli_connect($dbservername,$dbusername,"",$dbname);
-        if(!$connection){
-            echo "kết nối với csdl thất bại: " . mysqli_connect_error();
-            exit;
-        }
-
-        $sql_query ="SELECT ur_id,ur_name,ur_account,ur_pass,ur_email,ur_img,ur_phone,admin FROM users";
-        $query_result=mysqli_query($connection, $sql_query);
-
-        if (mysqli_num_rows($query_result) > 0) {     //ensure that $query_result have row
-            $accountInput =$_POST['username'];
-            $passInput=$_POST['userpassword'];
-            while($row=mysqli_fetch_assoc($query_result)){
-                if($accountInput==$row['ur_account']&&$passInput==$row['ur_pass']){
-                    $loginsuccess=true;
-                    $_SESSION['Id']=$row['ur_id'];
-                    $_SESSION['UserAccount']=$row['ur_account'];
-                    $_SESSION['UserName']=$row['ur_name'];
-                    $_SESSION['UserEmail']=$row['ur_email'];
-                    $_SESSION['UserAdmin']=($row['admin']==0)?false:true;
-                    $_SESSION['UserImage']=$row['ur_img'];
-                    $_SESSION['UserPhone']=$row['ur_phone'];
-                    $_SESSION['Login']=true;
-                    $loginsuccess=true;
-                    //unset($_SESSION['NumofLogin']);
-                    break;
-
-                }
-=======
     $sql_query = "SELECT ur_id,ur_name,ur_account,ur_pass,ur_email,ur_img,ur_phone,admin FROM users";
     $query_result = mysqli_query($connection, $sql_query);
 
@@ -86,7 +48,6 @@ if (isset($_POST['submit'])) {
                 $loginsuccess = true;
                 //unset($_SESSION['NumofLogin']);
                 break;
->>>>>>> dev
             }
         }
     }
