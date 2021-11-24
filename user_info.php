@@ -1,3 +1,16 @@
+<?php 
+session_start();
+
+?>
+
+// kiểm tra xem có phải là admin hay không
+<?php 
+    if(!isset($_SESSION['Login'])||($_SESSION['UserAdmin']==false)){
+      header('Location: warning.php');
+    }
+?>
+
+
 <!doctype html>
 <html lang="en">
   <head>
