@@ -175,7 +175,7 @@ include './inc/header.php';
                     </li>
 
                     <li>
-                        <a href="https://fitfood.vn/product/fit3" class="link">
+                        <a href="./products/fit3.php" class="link">
                                <div class="card">
                                 <img src="images/product/500x315/fit3.jpg" class="card-img-top" alt="">
                                 <div class="card-body">
@@ -192,7 +192,7 @@ include './inc/header.php';
                     </li>
 
                     <li>
-                        <a href="https://fitfood.vn/product/fit1"  class="link">
+                        <a href="./products/fit1.php"  class="link">
                             
                             <div class="card">
                                 <img src="images/product/500x315/fit1.jpg" class="card-img-top" alt="">
@@ -210,7 +210,7 @@ include './inc/header.php';
                     </li>
 
                     <li>
-                        <a href="https://fitfood.vn/product/fit2" class="link">
+                        <a href="./products/fit2.php" class="link">
                             
                             <div class="card">
                                 <img src="images/product/500x315/fit2.jpg" class="card-img-top" alt="">
@@ -261,7 +261,7 @@ include './inc/header.php';
                             </div>
                         </a>
                     </li>
-                    
+
                     <li>
                         <a href="https://fitfood.vn/product/veg" class="link">
 
@@ -277,6 +277,7 @@ include './inc/header.php';
                             </div>
                         </a>
                     </li>
+                    
                 </ul>
 
             </div>
