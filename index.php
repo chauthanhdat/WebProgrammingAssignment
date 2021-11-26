@@ -1,5 +1,27 @@
 <?php
-include './inc/header.php'
+session_start();
+?>
+
+<?php
+
+    if(isset($_POST['Logout'])){
+        // remove cookie
+        if(isset($_COOKIE[session_name()])){
+            setcookie(session_name(),'',time() - 3600, '/');
+        }
+
+        // unset data in $_SESSION
+        $_SESSION[] = array();
+
+        // destroy the session
+        session_destroy();
+        unset($_POST['Logout']);
+        header('Location: index.php');
+        unset($_POST);
+    }
+
+
+include './inc/header.php';
 //ahfiashd jflasdj flasj alkdj sklfjal
 ?>
 
@@ -137,8 +159,8 @@ include './inc/header.php'
             <div class="products">
                 <ul class="bxslider">
                     <li>
-                        <a href="https://fitfood.vn/product/full" class="link ">
-                            <div class="card">
+                        <a href="https://fitfood.vn/product/full" class="link">
+                            <div class="card">                            
                                 <img src="images/product/500x315/full.jpg" class="card-img-top" alt="">
                                 <div class="card-body">
                                     <h5 class="card-title d-flex justify-content-between">Gói FULL
@@ -147,10 +169,11 @@ include './inc/header.php'
                                     <p class="card-text">Gói SÁNG - TRƯA - TỐI. Ăn cả ngày phù hợp cho người bận
                                         rộn
                                     </p>
-                                </div>
+                                </div>                            
                             </div>
                         </a>
                     </li>
+
                     <li>
                         <a href="https://fitfood.vn/product/fit3" class="link">
                                <div class="card">
@@ -167,8 +190,9 @@ include './inc/header.php'
                             </div>
                         </a>
                     </li>
+
                     <li>
-                        <a href="https://fitfood.vn/product/fit1" class="link">
+                        <a href="https://fitfood.vn/product/fit1"  class="link">
                             
                             <div class="card">
                                 <img src="images/product/500x315/fit1.jpg" class="card-img-top" alt="">
@@ -184,6 +208,7 @@ include './inc/header.php'
                             </div>
                         </a>
                     </li>
+
                     <li>
                         <a href="https://fitfood.vn/product/fit2" class="link">
                             
@@ -200,6 +225,7 @@ include './inc/header.php'
                             </div>
                         </a>
                     </li>
+
                     <li>
                         <a href="https://fitfood.vn/product/meat-s" class="link">
 
@@ -217,6 +243,7 @@ include './inc/header.php'
                             </div>
                         </a>
                     </li>
+
                     <li>
                         <a href="https://fitfood.vn/product/meat" class="link">
 
@@ -234,6 +261,7 @@ include './inc/header.php'
                             </div>
                         </a>
                     </li>
+                    
                     <li>
                         <a href="https://fitfood.vn/product/veg" class="link">
 

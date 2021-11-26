@@ -1,3 +1,14 @@
+<?php 
+session_start();
+
+?>
+
+// kiểm tra xem có phải là admin hay không
+<?php 
+    if(!isset($_SESSION['Login'])||($_SESSION['UserAdmin']==false)){
+      header('Location: warning.php');
+    }
+?> 
 <!doctype html>
 <html lang="en">
   <head>
@@ -31,7 +42,7 @@
                       <!-- left column -->
                       <div class="col-md-3">
                         <div class="text-center">
-                          <img src="https://1.bp.blogspot.com/-TuCsF01fE2M/XroLo8YnPeI/AAAAAAAAlhk/szLN8QjJ918lHUB848AdNqfe36VuN0gtQCLcBGAsYHQ/s1600/hinh-nen-de-thuong-mau-hong-pink-anime-girl.png" class="avatar img-circle img-thumbnail" alt="avatar" width="315px" height="315px">
+                          <img src="https://i.pinimg.com/originals/08/3c/f7/083cf7ceb6fc8d817aba967bd8ce3b8e.png" class="avatar img-circle img-thumbnail" alt="avatar" width="315px" height="315px">
                           <h6>Upload a different photo...</h6>
                           
                           <input type="file" class="form-control">

@@ -61,7 +61,11 @@ if (isset($_POST['submit'])) {
         //echo "<script> alert('Thông tin đăng nhập không chính xác vui long nhập lại'); </script>";
         //sleep(10);
         // header("Location:login.php");
-    } else {
+    }else if($_SESSION['UserAdmin']==true){
+        header('Location: adminPage.php');
+        unset($_POST);
+    }
+     else {
         header('Location: index.php');
         unset($_POST);
     }
