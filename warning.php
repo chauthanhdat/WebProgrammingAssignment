@@ -21,17 +21,20 @@
 
 
 <!-- Jumbotron -->
+<div class="container-fuild bg-white " id="warning">
 <div
-  class="bg-image p-5 text-center shadow-1-strong rounded mb-5 "
+  class="bg-image p-5 text-center shadow-1-strong rounded mb-5 bg-white"
   style="background-image: url('./images/user_avatar/warningPage.jpg');height: 100vh;
         background-repeat: no-repeat;
         background-position: center; 
   "
 >
-  <h1 class="mb-3 h1">Trang này không tồn tại</h1>
-    <a href="./index.php" class="btn btn-outline-success" role="button" >Quay lại trang chủ</a>
+  <h2 class="mt-0 title title-center">Trang này không tồn tại</h2>
+    <a href="./index.php" class="btn btn-outline-danger btn-sm" role="button" >Quay lại</a>
   
 </div>
+</div>
+
 
     
 <?php 

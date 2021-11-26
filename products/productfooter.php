@@ -12,7 +12,7 @@
    <div class="container">
         <!-- thực phẩm chế biến ăn liền -->
        <div class="danh-muc mt-5 pt-5">
-           <h2 class="text-dark title-center pb-3 mb-3 h1">CHẾ BIẾN SẴN</h2>
+           <h2 class="title title-center text-dark">CHẾ BIẾN SẴN</h2>
    
            <div class="row justify-content-md-center" >
 
@@ -42,9 +42,7 @@
 
                <div class="col-md-3">
                    <a href="https://fitfood.vn/product/18/06-burger-ga-teriyaki" class="link" style="text-decoration: none">
-                           <span class="icon">
-                               <i class="fa fa-check" aria-hidden="true"></i>
-                           </span>
+                           
                            <div class="card" >
                            <img class="card-img-top" src="https://fitfood.vn/img/500x315/images/burger-16374709014232.jpg" alt="Card image cap">
                            <div class="card-body">
@@ -61,12 +59,12 @@
        </div>
 
        <div class="danh-muc mt-5 pt-5">
-           <h2 class="text-dark title-center pb-3 mb-3 h1">NƯỚC GIẢI KHÁT</h2>
+           <h2 class="title title-center text-dark">NƯỚC GIẢI KHÁT</h2>
            <div class="row justify-content-md-center" >
 
                <div class="col-md-3">
                    <a href="https://fitfood.vn/product/1/fitfood-juice-sweetie" class="link" style="text-decoration: none">
-                       <span class="icon"><i class="fa fa-check" aria-hidden="true"></i></span>
+                       
                        <div class="card">
                            <img src="https://fitfood.vn/img/500x315/images/fit-web-combo-sweetie-new-15985103893515.jpg" class="card-img-top" alt="">
                            <div class="card-body">
@@ -81,7 +79,7 @@
 
                <div class="col-md-3">
                    <a href="https://fitfood.vn/product/1/fitfood-juice-sweetie" class="link" style="text-decoration: none">
-                           <span class="icon"><i class="fa fa-check" aria-hidden="true"></i></span>
+                           
                            <div class="card">
                                <img src="https://fitfood.vn/img/500x315/images/fit-web-combo-sweetie-new-15985103893515.jpg" class="card-img-top" alt="">
                                <div class="card-body">
@@ -96,7 +94,7 @@
 
                <div class="col-md-3">
                    <a href="https://fitfood.vn/product/1/fitfood-juice-sweetie" class="link" style="text-decoration: none">
-                           <span class="icon"><i class="fa fa-check" aria-hidden="true"></i></span>
+                           
                            <div class="card">
                                <img src="https://fitfood.vn/img/500x315/images/fit-web-combo-sweetie-new-15985103893515.jpg" class="card-img-top" alt="">
                                <div class="card-body">
@@ -110,7 +108,6 @@
                </div>
                <div class="col-md-3">
                    <a href="https://fitfood.vn/product/1/fitfood-juice-sweetie" class="link" style="text-decoration: none">
-                           <span class="icon"><i class="fa fa-check" aria-hidden="true"></i></span>
                            <div class="card">
                                <img src="https://fitfood.vn/img/500x315/images/fit-web-combo-sweetie-new-15985103893515.jpg" class="card-img-top" alt="">
                                <div class="card-body">
@@ -124,7 +121,6 @@
                </div>
                <div class="col-md-3">
                    <a href="https://fitfood.vn/product/1/fitfood-juice-sweetie" class="link" style="text-decoration: none">
-                           <span class="icon"><i class="fa fa-check" aria-hidden="true"></i></span>
                            <div class="card">
                                <img src="https://fitfood.vn/img/500x315/images/fit-web-combo-sweetie-new-15985103893515.jpg" class="card-img-top" alt="">
                                <div class="card-body">
@@ -141,12 +137,11 @@
        </div>
 
        <div class="danh-muc mt-5 pt-5">
-           <h2 class="text-dark title-center pb-3 mb-3 h1">SNACK HEALTHY</h2>
+           <h2 class="title title-center text-dark">SNACK HEALTHY</h2>
            <div class="row justify-content-md-center" >
 
                <div class="col-md-4">
                    <a href="https://fitfood.vn/product/1/fitfood-juice-sweetie" class="link" style="text-decoration: none">
-                       <span class="icon"><i class="fa fa-check" aria-hidden="true"></i></span>
                        <div class="card">
                            <img src="https://fitfood.vn/img/500x315/images/fit-web-combo-sweetie-new-15985103893515.jpg" class="card-img-top" alt="">
                            <div class="card-body">
@@ -161,7 +156,6 @@
 
                <div class="col-md-4">
                    <a href="https://fitfood.vn/product/1/fitfood-juice-sweetie" class="link" style="text-decoration: none">
-                       <span class="icon"><i class="fa fa-check" aria-hidden="true"></i></span>
                        <div class="card">
                            <img src="https://fitfood.vn/img/500x315/images/fit-snacks-500x315-2-15777698786894.jpg" class="card-img-top" alt="">
                            <div class="card-body">
@@ -184,7 +178,7 @@
    </div>
    <div class="featured-product mt-5 pt-5 bg-danger rounded mb-0 " >
            <div class="container-fluid">
-               <h2 class="text-white title title-center pb-3 mb-3 h1">GÓI ĂN LÀNH MẠNH</h2>
+               <h2 class="title title-center text-white">GÓI ĂN LÀNH MẠNH</h2>
                <div class="products">
                    <ul class="bxslider">
                        <li>
@@ -352,18 +346,18 @@
                     <h4>Follow us</h4>
                     <div class="social mb-3">
                         <a href="#" target="_blank">
-                            <img src="images/product/ic-fb.png" alt="" border="0" />
+                            <img src="../images/product/ic-fb.png" alt="" border="0" />
                         </a>
                         <a href="#" target="_blank">
-                            <img src="images/product/ic-instagram.png" alt="" border="0" />
+                            <img src="../images/product/ic-instagram.png" alt="" border="0" />
                         </a>
                         <a href="#" target="_blank">
-                            <img src="images/product/ic-youtube.png" alt="" border="0" />
+                            <img src="../images/product/ic-youtube.png" alt="" border="0" />
                         </a>
                     </div>
                     <div>
                         <a href="http://online.gov.vn/HomePage/CustomWebsiteDisplay.aspx?DocId=34289">
-                            <img src="images/product/logo-bocongthuong.png" alt="" border="0" width="120px" />
+                            <img src="../images/product/logo-bocongthuong.png" alt="" border="0" width="120px" />
                         </a>
                     </div>
                 </div>

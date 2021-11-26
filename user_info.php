@@ -30,10 +30,10 @@ session_start();
             <?php
             include './inc/sidebar_admin.php'
             ?>
-            <div class="col py-3">
+            <div class="col-9 py-5 px-5">
                 <!--Place content here-->
                 <div class="container mt-3">
-                <h2>Thông tin khách hàng</h2>
+                <h2 class="title">Thông tin khách hàng</h2>
                 <!-- <form class="form-horizontal" role="form">
                           <div class="form-group">
                             
@@ -102,7 +102,11 @@ session_start();
     </tbody>
   </table>
   <!-- <div class=""></div> -->
+<<<<<<< HEAD
   <button type="button" class="btn btn-outline-primary" ><i class="bi bi-plus-lg"></i>ADD NEW ACCOUNT</button>
+=======
+  <button type="button" class="btn btn-outline-danger" ><i class="bi bi-plus-lg"></i>ADD NEW ACCOUNT</button>
+>>>>>>> e27b1378e94af0ba86b659f42641a65e72a8ac91
 </div>
 
 

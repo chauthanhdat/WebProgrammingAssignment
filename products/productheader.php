@@ -10,10 +10,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="lang" content="vi">
     <title>Fitfood VN</title>
+    <link href="./../fonts/Montserrat.css" rel="stylesheet">
     <link rel="icon" href="./../images/product/favicon.ico">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css">
-    <link href="fonts/Montserrat.css" rel="stylesheet">
     <link rel="stylesheet" href="./../css/jquery.bxslider.min.css">
     <link rel="stylesheet" href="./../css/bootstrap.min.css">
     <link rel="stylesheet" href="./../css/style.css">
