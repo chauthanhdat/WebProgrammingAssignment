@@ -1,5 +1,37 @@
+<?php
+session_start();
+?>
+
+<?php 
+    //connect get data
+    //if(!isset($_SESSION['food_arr_price'])){
+        $dbservername = "localhost";
+        $dbusername = "root";
+        $dbname = "fitfooddb";
+        $loginsuccess = false;
+        $connection = mysqli_connect($dbservername, $dbusername, "", $dbname);
+        if (!$connection) {
+            echo "kết nối với csdl thất bại: " . mysqli_connect_error();
+            exit;
+        }
+
+        $sql_query="SELECT food_name,food_price FROM food";
+        $query_result = mysqli_query($connection, $sql_query);
+
+        $_SESSION['food_arr_price']=array();
+        if(mysqli_num_rows($query_result)>0){
+            while ($row = mysqli_fetch_assoc($query_result)) {
+                $_SESSION['food_arr_price'][$row['food_name']]=$row['food_price'];
+            }
+            mysqli_free_result($query_result);
+        }
 
 
+        mysqli_close($connection);
+    //}
+    
+
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -37,7 +69,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">
+                        <a class="nav-link" href="./carts.php">
                             Đặt hàng
                         </a>
                     </li>
@@ -74,7 +106,7 @@ echo "<ul class='nav navbar-nav navbar-sub flex-row order-1 order-xl-0 '>
                 <li><a class='dropdown-item' href='#'>Action</a></li>
                 <li><a class='dropdown-item' href='#'>Another action</a></li>
                 <li><hr class='dropdown-divider'></li>
-                <li><form method='post'>
+                <li><form method='post' action='../index.php'>
                  <input type='submit' name='Logout'     value='Đăng xuất'/>
                 </form>
                 </li>

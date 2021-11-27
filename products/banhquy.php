@@ -1,3 +1,5 @@
+
+
 <?php 
     include 'productheader.php';
 ?>
@@ -12,7 +14,7 @@
                 <h3 class="text-dark">COOKIE LÀNH MẠNH </h3>
                 <div class="d-flex mb-3">
                     <h4 class="text-dark me-3">GIÁ:</h4>
-                    <h4 class="text-danger">100,000VND</h4>
+                    <h4 class="text-danger"><?php  echo number_format($_SESSION['food_arr_price']['BANH QUY']);?> VND</h4>
                 </div>
                 <div class="content-food mb-1">
                     <p>175 Gram/Hộp</p>

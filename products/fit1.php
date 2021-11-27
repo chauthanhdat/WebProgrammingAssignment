@@ -1,3 +1,6 @@
+
+
+
 <?php 
     include 'productheader.php';
 ?>
@@ -12,7 +15,7 @@
                 <h3 class="text-dark">GÓI FIT1</h3>
                 <div class="d-flex mb-3">
                     <h4 class="text-dark me-3">GIÁ:</h4>
-                    <h4 class="text-danger">600,000VND</h4>
+                    <h4 class="text-danger"><?php  echo number_format($_SESSION['food_arr_price']['BURGER']);?> VND</h4>
                 </div>
                 <div class="content-food mb-1">
                     <p>Gói 2 bữa SÁNG - TRƯA</p>

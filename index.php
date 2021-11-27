@@ -6,18 +6,26 @@ session_start();
 
     if(isset($_POST['Logout'])){
         // remove cookie
-        if(isset($_COOKIE[session_name()])){
-            setcookie(session_name(),'',time() - 3600, '/');
-        }
+        // if(isset($_COOKIE[session_name()])){
+        //     setcookie(session_name(),'',time() - 3600, '/');
+        // }
 
         // unset data in $_SESSION
-        $_SESSION[] = array();
+        //$_SESSION[] = array();
 
         // destroy the session
-        session_destroy();
+        //session_destroy();
         unset($_POST['Logout']);
-        header('Location: index.php');
+        //header('Location: index.php');
         unset($_POST);
+        unset($_SESSION['Id']);
+        unset($_SESSION['UserAccount']);
+        unset($_SESSION['UserName']);
+        unset($_SESSION['UserEmail']);
+        unset($_SESSION['UserAdmin']);
+        unset($_SESSION['UserImage']);
+        unset($_SESSION['UserPhone']);
+        unset($_SESSION['Login']);
     }
 
 
@@ -25,7 +33,44 @@ include './inc/header.php';
 //ahfiashd jflasdj flasj alkdj sklfjal
 ?>
 
+<?php 
+    //connect get data
+    //if(!isset($_SESSION['food_arr_price'])){
+        $dbservername = "localhost";
+        $dbusername = "root";
+        $dbname = "fitfooddb";
+        $loginsuccess = false;
+        $connection = mysqli_connect($dbservername, $dbusername, "", $dbname);
+        if (!$connection) {
+            echo "kết nối với csdl thất bại: " . mysqli_connect_error();
+            exit;
+        }
+
+        $sql_query="SELECT food_name,food_price FROM food";
+        $query_result = mysqli_query($connection, $sql_query);
+
+        $_SESSION['food_arr_price']=array();
+        if(mysqli_num_rows($query_result)>0){
+            while ($row = mysqli_fetch_assoc($query_result)) {
+                $_SESSION['food_arr_price'][$row['food_name']]=$row['food_price'];
+            }
+            mysqli_free_result($query_result);
+        }
+
+
+        mysqli_close($connection);
+    //}
+    
+
+?>
+
+
+
 <div class="main" role="main">
+<?php
+
+print_r($_SESSION['food_arr_price']);
+?>
     <!-- main slider -->
     <div id="main-banner" class="carousel slide" data-bs-ride="carousel">
         <ol class="carousel-indicators">
@@ -164,7 +209,7 @@ include './inc/header.php';
                                 <img src="images/product/500x315/full.jpg" class="card-img-top" alt="">
                                 <div class="card-body">
                                     <h5 class="card-title d-flex justify-content-between">Gói FULL
-                                        <span>750,000đ</span>
+                                        <span> <?php  echo number_format($_SESSION['food_arr_price']['GOI FIT FULL']);?> đ</span>
                                     </h5>
                                     <p class="card-text">Gói SÁNG - TRƯA - TỐI. Ăn cả ngày phù hợp cho người bận
                                         rộn
@@ -180,7 +225,7 @@ include './inc/header.php';
                                 <img src="images/product/500x315/fit3.jpg" class="card-img-top" alt="">
                                 <div class="card-body">
                                     <h5 class="card-title d-flex justify-content-between">Gói FIT 3
-                                        <span>600,000đ</span>
+                                        <span><?php  echo number_format($_SESSION['food_arr_price']['GOI FIT 3']);?> đ</span>
                                     </h5>
                                     <p class="card-text">Gói TRƯA - TỐI. *Best Seller, Thích hợp cho dân văn
                                         phòng
@@ -198,7 +243,7 @@ include './inc/header.php';
                                 <img src="images/product/500x315/fit1.jpg" class="card-img-top" alt="">
                                 <div class="card-body">
                                     <h5 class="card-title d-flex justify-content-between">Gói FIT 1
-                                        <span>600,000đ</span>
+                                        <span><?php  echo number_format($_SESSION['food_arr_price']['GOI FIT 1']);?> đ</span>
                                     </h5>
                                     <p class="card-text">Gói SÁNG - TRƯA. Dành thời gian dùng bữa tối cùng gia
                                         đình
@@ -216,7 +261,7 @@ include './inc/header.php';
                                 <img src="images/product/500x315/fit2.jpg" class="card-img-top" alt="">
                                 <div class="card-body">
                                     <h5 class="card-title d-flex justify-content-between">Gói FIT 2
-                                        <span>600,000đ</span>
+                                        <span><?php  echo number_format($_SESSION['food_arr_price']['GOI FIT 2']);?> đ</span>
                                     </h5>
                                     <p class="card-text">Gói SÁNG - TỐi. Ăn trưa cùng bạn bè đồng nghiệp văn
                                         phòng
@@ -233,7 +278,7 @@ include './inc/header.php';
                                 <img src="images/product/500x315/meat-s.jpg" class="card-img-top" alt="">
                                 <div class="card-body">
                                     <h5 class="card-title d-flex justify-content-between">Gói MEAT-S
-                                        <span>1,200,000đ</span>
+                                        <span><?php  echo number_format($_SESSION['food_arr_price']['GOI MEAT-S']);?>đ</span>
                                     </h5>
                                     <p class="card-text">Gói MEAT thêm phần ăn sáng thường. Tập luyện cường độ
                                         nặng
@@ -251,7 +296,7 @@ include './inc/header.php';
                                 <img src="images/product/500x315/meat.jpg" class="card-img-top" alt="">
                                 <div class="card-body">
                                     <h5 class="card-title d-flex justify-content-between">Gói MEAT
-                                        <span>950,000đ</span>
+                                        <span><?php  echo number_format($_SESSION['food_arr_price']['GOI MEAT']);?> đ</span>
                                     </h5>
                                     <p class="card-text">Gói TRƯA - TỐI. Dành cho dân Gym. Gấp đôi đạm và rau
                                         củ.
@@ -269,7 +314,7 @@ include './inc/header.php';
                                 <img src="images/product/500x315/veg.jpg" class="card-img-top" alt="">
                                 <div class="card-body">
                                     <h5 class="card-title d-flex justify-content-between">Gói CHAY
-                                        <span>600,000đ</span>
+                                        <span><?php  echo number_format($_SESSION['food_arr_price']['GOI CHAY']);?> đ</span>
                                     </h5>
                                     <p class="card-text">Gói CHAY menu riêng 2 bữa. Nấu theo phong cách Âu</p>
 

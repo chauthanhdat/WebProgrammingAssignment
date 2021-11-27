@@ -34,7 +34,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">
+                        <a class="nav-link" href="./products/carts.php">
                             Đặt hàng
                         </a>
                     </li>
@@ -71,7 +71,7 @@
                             <li><a class='dropdown-item' href='#'>Action</a></li>
                             <li><a class='dropdown-item' href='#'>Another action</a></li>
                             <li><hr class='dropdown-divider'></li>
-                            <li><form method='post'>
+                            <li><form method='post' action='index.php'>
                              <input type='submit' name='Logout'     value='Đăng xuất'/>
                             </form>
                             </li>

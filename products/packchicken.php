@@ -12,7 +12,7 @@
                 <h3 class="text-dark">06 GÓI ỨC GÀ ĂN LIỀN</h3>
                 <div class="d-flex mb-3">
                     <h4 class="text-dark me-3">GIÁ:</h4>
-                    <h4 class="text-danger">199,000VND</h4>
+                    <h4 class="text-danger"><?php  echo number_format($_SESSION['food_arr_price']['CHICKEN PACK']);?> VND</h4>
                 </div>
                 <div class="content-food mb-1">
                     <p>150 Gram/Gói</p>

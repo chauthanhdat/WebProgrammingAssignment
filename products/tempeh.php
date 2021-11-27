@@ -6,13 +6,13 @@
     <div class="container">
         <div class="row mb-5">
             <div class="col-md-4">
-                <img src="https://fitfood.vn/img/326x206/images/fit-web-combo-sweetie-new-15985103893515.jpg" alt="" class="img-fluid">
+                <img src="https://fitfood.vn/img/500x315/images/fit-snacks-500x315-5-1577769905295.jpg" alt="" class="img-fluid">
             </div>
             <div class="col-md-8">
                 <h3 class="text-dark">TEMPEH TƯƠNG NÉN </h3>
                 <div class="d-flex mb-3">
                     <h4 class="text-dark me-3">GIÁ:</h4>
-                    <h4 class="text-danger">100,000VND</h4>
+                    <h4 class="text-danger"><?php  echo number_format($_SESSION['food_arr_price']['SWEETIE']);?> VND</h4>
                 </div>
                 <div class="content-food mb-1">
                     <p>500 Gram/Gói</p>
