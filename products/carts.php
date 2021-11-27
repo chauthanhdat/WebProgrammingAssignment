@@ -28,6 +28,8 @@
     vertical-align: middle;
 }
 
+
+
 </style>
 
 <div class="container px-3 my-5 clearfix">
@@ -66,9 +68,9 @@
                         </div>
                       </div>
                     </td>
-                    <td class="text-right font-weight-semibold align-middle p-4">600.000</td>
-                    <td class="align-middle p-4"><input type="number" class="form-control text-center" value="2"></td>
-                    <td class="text-right font-weight-semibold align-middle p-4">600.000xQuantity</td>
+                    <td class="text-right font-weight-semibold align-middle p-4 text-success"  >600,000</td>
+                    <td class="align-middle p-4" id="haha"><input id='product-1' type="number" class="form-control text-center" min="1" value="1" onchange="myfunction('product-1')" ></td>
+                    <td class="text-right font-weight-semibold align-middle p-4 text-danger" >600,000 VND</td>
                     <td class="text-center align-middle px-0"><a href="#" class="shop-tooltip close float-none text-danger" title="" data-original-title="Remove">×</a></td>
                   </tr>
         
@@ -88,9 +90,9 @@
                         </div>
                       </div>
                     </td>
-                    <td class="text-right font-weight-semibold align-middle p-4">600.000</td>
-                    <td class="align-middle p-4"><input type="number" class="form-control text-center" value="1"></td>
-                    <td class="text-right font-weight-semibold align-middle p-4">600.000xQuantity</td>
+                    <td class="text-right font-weight-semibold align-middle p-4 text-success">600,000</td>
+                    <td class="align-middle p-4"><input id='product-2' type="number" class="form-control text-center" min="1" value="1" onchange="myfunction('product-2');count_sum('product-2');"  ></td>
+                    <td class="text-right font-weight-semibold align-middle p-4 text-danger" id="hehe">600,000 VND</td>
                     <td class="text-center align-middle px-0"><a href="#" class="shop-tooltip close float-none text-danger" title="" data-original-title="Remove">×</a></td>
                   </tr>
         
@@ -106,9 +108,9 @@
                         </div>
                       </div>
                     </td>
-                    <td class="text-right font-weight-semibold align-middle p-4">600.000</td>
-                    <td class="align-middle p-4"><input type="number" class="form-control text-center" value="1"></td>
-                    <td class="text-right font-weight-semibold align-middle p-4">600.000xQuantity</td>
+                    <td class="text-right font-weight-semibold align-middle p-4 text-success" >600,000</td>
+                    <td class="align-middle p-4"><input id='product-3'  type="number" class="form-control text-center" min="1" value="1" onchange="myfunction('product-3')" ></td>
+                    <td class="text-right font-weight-semibold align-middle p-4 text-danger">600,000 VND</td>
                     <td class="text-center align-middle px-0"><a href="#" class="shop-tooltip close float-none text-danger" title="" data-original-title="Remove">×</a></td>
                   </tr>
         
@@ -147,6 +149,60 @@
           </div>
       </div>
   </div>
-<?php 
-    include 'productfooter.php';
-?>
+    <p id="temp"></p>
+
+  <script>
+      var price_list=[];
+      function setup_row_info(){
+          let trlist=document.getElementsByTagName("tr");
+          //document.getElementById('temp').innerHTML=trlist.length-1;
+          for(let i =0;i<trlist.length;i++){
+              if(i==0){
+                  price_list[i]=0;
+              }{
+                    let product_id="product-" +i;
+                //document.getElementById('temp').innerHTML=pro;
+                let value_init=document.getElementById(product_id).parentNode.nextElementSibling.innerHTML;//.split(" ")[0];
+                //value_init=value_init.replace(/[^\d\.\-]/g, "");
+                document.getElementById("temp").innerHTML=value_init.nodeName;
+              }
+              
+          }
+          
+      }
+      setup_row_info();
+
+
+     function myfunction(e){
+        let value=document.getElementById(e).value;
+        if(value<0){
+            document.getElementById(e).value=-1*value;
+            value=value*(-1);
+        }
+        
+        //let x=document.getElementById(e).parentNode.nextElementSibling.id;
+        let dongia=document.getElementById(e).parentNode.previousElementSibling.innerHTML;
+        dongia = dongia.replace(/[^\d\.\-]/g, ""); // You might also include + if you want them to be able to type it
+        var num = parseFloat(dongia);
+        let thanhtien=value*num;
+        document.getElementById(e).parentNode.nextElementSibling.innerHTML=thanhtien.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") + " VND";
+        //document.getElementById('temp').innerHTML=num;
+            // document.getElementById('temp').innerHTML=num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+
+       // let dongia=inp.previousSibling.innerHTML
+
+       // let dongia=parseFloat(dongia);
+        
+       function toArray(arraylike) {
+            var array= new Array(arraylike.length);
+            for (var i= 0, n= arraylike.length; i<n; i++)
+                array[i]= arraylike[i];
+            return array;
+        }
+
+     }
+  </script>
+
+    
+</body>
+</html>
