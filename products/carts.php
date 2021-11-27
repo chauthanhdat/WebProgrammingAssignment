@@ -1,5 +1,5 @@
 <?php 
-        include 'productheader.php';
+    include 'productheader.php';
 ?>
 
 <style> body{
@@ -122,24 +122,20 @@
                 <label class="text-muted font-weight-normal">Promocode</label>
                 <input type="text" placeholder="ABC" class="form-control">
               </div> -->
-
-              <div class="d-flex">
-                <!-- <div class="text-right mt-4 mr-5">
+              <!-- <div class="d-flex">
+                <div class="text-right mt-4 mr-5">
                   <button class="text-muted font-weight-normal m-0">Discount</button>
                   
                 </div> -->
-
                 <div class="container mt-3">
                 <ul class="pagination justify-content-end"> 
                   <li><button class="btn btn-outline-danger" ><b>Confirm</b></button></li>
 
                 </div>
-
                 <!-- <div class="text-right mt-4">
                   <label class="text-muted font-weight-normal m-0">Total price</label>
                   <div class="text-large"><strong>$1164.65</strong></div>
                 </div> -->
-
               </div>
             </div>
         
