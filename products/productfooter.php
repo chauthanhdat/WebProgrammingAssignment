@@ -364,7 +364,18 @@
         <p class="copyright mb-0">© Copyright Fitfood.</p>
     </div>
 </div>
-
+<script>
+    function check_login(){
+        
+        if (login_js==0){ //chưa dăng nhpa65
+            alert('bạn cần phải đăng nhập trước');
+            return false;
+        }
+        else{
+            return true;
+        }
+    }
+</script>
 <script src="./../js/jquery-3.6.0.min.js"></script>
 <script src="./../js/bootstrap.bundle.min.js"></script>
 <script src="./../js/jquery.bxslider.js"></script>

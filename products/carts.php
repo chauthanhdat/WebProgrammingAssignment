@@ -152,26 +152,7 @@
     <p id="temp"></p>
 
   <script>
-      var price_list=[];
-      function setup_row_info(){
-          let trlist=document.getElementsByTagName("tr");
-          //document.getElementById('temp').innerHTML=trlist.length-1;
-          for(let i =0;i<trlist.length;i++){
-              if(i==0){
-                  price_list[i]=0;
-              }{
-                    let product_id="product-" +i;
-                //document.getElementById('temp').innerHTML=pro;
-                let value_init=document.getElementById(product_id).parentNode.nextElementSibling.innerHTML;//.split(" ")[0];
-                //value_init=value_init.replace(/[^\d\.\-]/g, "");
-                document.getElementById("temp").innerHTML=value_init.nodeName;
-              }
-              
-          }
-          
-      }
-      setup_row_info();
-
+ 
 
      function myfunction(e){
         let value=document.getElementById(e).value;

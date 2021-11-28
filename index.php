@@ -67,10 +67,7 @@ include './inc/header.php';
 
 
 <div class="main" role="main">
-<?php
 
-print_r($_SESSION['food_arr_price']);
-?>
     <!-- main slider -->
     <div id="main-banner" class="carousel slide" data-bs-ride="carousel">
         <ol class="carousel-indicators">

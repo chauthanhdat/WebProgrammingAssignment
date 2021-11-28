@@ -30,6 +30,14 @@ session_start();
         mysqli_close($connection);
     //}
     
+    $temp =1;
+    if (!isset($_SESSION['Login'])||$_SESSION['Login']==false){
+        $temp=0;
+        
+    }
+    echo "<script> var login_js= $temp; </script>";
+    
+    unset($temp);
 
 ?>
 
@@ -117,8 +125,8 @@ echo "<ul class='nav navbar-nav navbar-sub flex-row order-1 order-xl-0 '>
 }else{
 
 echo "<ul class='nav navbar-nav navbar-sub order-1 order-xl-0 '>                
-<li class='nav-item'><a id='btn-register' class='nav-link' href='./register.php'>Đăng ký</a></li>
-<li class='nav-item '><a id='btn-login' class='nav-link' href='./login.php'>Đăng nhập</a></li>
+<li class='nav-item'><a id='btn-register' class='nav-link' href='../register.php'>Đăng ký</a></li>
+<li class='nav-item '><a id='btn-login' class='nav-link' href='../login.php'>Đăng nhập</a></li>
 </ul>";
 }
     ?>

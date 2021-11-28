@@ -1,5 +1,6 @@
 <?php
-session_start();
+  session_start();
+
 ?>
 
 <!--//ahihi-->
@@ -106,10 +107,16 @@ include './inc/header.php'
       }
 
       if (mysqli_query($connection, $sql_query)) {
-        mysqli_close($connection);
-        unset($_POST);
+        //mysqli_close($connection);       
         unset($_POST['submit']);
-        header('Location: login.php?#');
+        unset($_POST);
+        echo "<script type='text/javascript'>
+          window.location.href = './login.php';
+        </script>";
+        //$_SESSION['register']=true;
+        //header('Location: login.php');
+        //header('Location: login.php');
+
       } else {
         echo "Error: " . $sql . "<br>" . mysqli_error($conn);
         mysqli_close($connection);
