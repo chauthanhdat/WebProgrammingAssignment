@@ -12,13 +12,13 @@ include './inc/header.php'
                         <div class="article mb-4">
                             <div class="row">
                                 <div class="col-md-3 col-xl-2 mb-2">
-                                    <a href="article1.php" class="thumb">
+                                    <a href="article/article1.php" class="thumb">
                                         <img src="images/product/120x0/article-1.jpg" class="img-fluid">
                                     </a>
                                 </div>
                                 <div class="col-md-9 col-xl-10">
                                     <div class="d-flex flex-column flex-lg-row justify-content-between">
-                                        <h3 class="title"><a href="article1.php">Fitfood
+                                        <h3 class="title"><a href="article/article1.php">Fitfood
                                                 VN hợp tác cùng H&amp;H Nutrition ra mắt &quot;Gói tư vấn dinh dưỡng
                                                 chuyên sâu&quot;</a></h3>
                                         <p class="meta">20/11/2020</p>
@@ -37,13 +37,13 @@ include './inc/header.php'
                         <div class="article mb-4">
                             <div class="row">
                                 <div class="col-md-3 col-xl-2 mb-2">
-                                    <a href="https://fitfood.vn/news/fitfood-chay-cung-rom-chinh-thuc-hop-tac-voi-anh-tu-wilson" class="thumb">
+                                    <a href="article/article2.php" class="thumb">
                                         <img src="images/product/120x0/article-2.jpg" class="img-fluid">
                                     </a>
                                 </div>
                                 <div class="col-md-9 col-xl-10">
                                     <div class="d-flex flex-column flex-lg-row justify-content-between">
-                                        <h3 class="title"><a href="https://fitfood.vn/news/fitfood-chay-cung-rom-chinh-thuc-hop-tac-voi-anh-tu-wilson">FITFOOD
+                                        <h3 class="title"><a href="article/article2.php">FITFOOD
                                                 &quot;chạy cùng Ròm&quot;, chính thức hợp tác với Anh Tú Wilson</a></h3>
                                         <p class="meta">14/10/2020</p>
                                     </div>
@@ -55,13 +55,13 @@ include './inc/header.php'
                         <div class="article mb-4">
                             <div class="row">
                                 <div class="col-md-3 col-xl-2 mb-2">
-                                    <a href="https://fitfood.vn/news/fitfood-hop-tac-cung-star-kombucha-ra-mat-combo-an-sach-song-khoe" class="thumb">
+                                    <a href="article/article3.php" class="thumb">
                                         <img src="images/product/120x0/article-3.jpg" class="img-fluid">
                                     </a>
                                 </div>
                                 <div class="col-md-9 col-xl-10">
                                     <div class="d-flex flex-column flex-lg-row justify-content-between">
-                                        <h3 class="title"><a href="https://fitfood.vn/news/fitfood-hop-tac-cung-star-kombucha-ra-mat-combo-an-sach-song-khoe">FITFOOD
+                                        <h3 class="title"><a href="article/article3.php">FITFOOD
                                                 HỢP TÁC CÙNG STAR KOMBUCHA RA MẮT COMBO &quot;ĂN SẠCH SỐNG
                                                 KHỎE&quot;</a></h3>
                                         <p class="meta">02/10/2020</p>
@@ -74,13 +74,13 @@ include './inc/header.php'
                         <div class="article mb-4">
                             <div class="row">
                                 <div class="col-md-3 col-xl-2 mb-2">
-                                    <a href="https://fitfood.vn/news/5-sai-lam-pho-bien-khien-ban-khong-the-giam-can-khi-an-che-do-eat-clean" class="thumb">
+                                    <a href="article/article4.php" class="thumb">
                                         <img src="images/product/120x0/article-4.jpg" class="img-fluid">
                                     </a>
                                 </div>
                                 <div class="col-md-9 col-xl-10">
                                     <div class="d-flex flex-column flex-lg-row justify-content-between">
-                                        <h3 class="title"><a href="https://fitfood.vn/news/5-sai-lam-pho-bien-khien-ban-khong-the-giam-can-khi-an-che-do-eat-clean">5
+                                        <h3 class="title"><a href="article/article4.php">5
                                                 sai lầm phổ biến khiến bạn không thể giảm cân khi ăn chế độ Eat
                                                 Clean</a></h3>
                                         <p class="meta">19/07/2020</p>
@@ -95,14 +95,13 @@ include './inc/header.php'
                         <div class="article mb-4">
                             <div class="row">
                                 <div class="col-md-3 col-xl-2 mb-2">
-                                    <a href="https://fitfood.vn/news/cheat-day-la-gi-va-co-phu-hop-voi-che-do-eat-clean-khong" class="thumb">
+                                    <a href="article/article5.php" class="thumb">
                                         <img src="images/product/120x0/article-5.jpg" class="img-fluid">
                                     </a>
                                 </div>
                                 <div class="col-md-9 col-xl-10">
                                     <div class="d-flex flex-column flex-lg-row justify-content-between">
-                                        <h3 class="title"><a href="https://fitfood.vn/news/cheat-day-la-gi-va-co-phu-hop-voi-che-do-eat-clean-khong">Cheat
-                                                Day là gì và có phù hợp với chế độ Eat Clean không?</a></h3>
+                                        <h3 class="title"><a href="article/article5.php">Cheat Day là gì và có phù hợp với chế độ Eat Clean không?</a></h3>
                                         <p class="meta">18/07/2020</p>
                                     </div>
                                     <p class="excerpt mb-0">Một chế độ ăn kiêng khắc nghiệt có thể gây ảnh hưởng xấu đến

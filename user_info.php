@@ -3,7 +3,6 @@ session_start();
 
 ?>
 
-// kiểm tra xem có phải là admin hay không
 <?php 
     if(!isset($_SESSION['Login'])||($_SESSION['UserAdmin']==false)){
       header('Location: warning.php');
@@ -14,7 +13,7 @@ session_start();
 <!doctype html>
 <html lang="en">
   <head>
-    <title>login-form</title>
+    <title>User info</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="css/bootstrap.min.css" rel="stylesheet">

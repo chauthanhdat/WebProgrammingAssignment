@@ -1,7 +1,7 @@
 <div class="footer bg-dark">
     <div class="container-fluid ">
-        <a href="index.php" class="mb-4 d-block">
-            <img src="images/product/logo-fitfood.png" alt="" border="0" />
+        <a href="./../index.php" class="mb-4 d-block">
+            <img src="./../images/product/logo-fitfood.png" alt="" border="0" />
         </a>
         <div class="widget-footer mb-4">
             <div class="row">
@@ -18,28 +18,28 @@
                 <div class="col-md-3 mb-3">
                     <h4>Điều khoản chung</h4>
                     <ul>
-                        <li><a href="/article/term.php">Chính Sách Quy Định Chung</a></li>
-                        <li><a href="/article/term.php">Quy Định Hình Thức Thanh Toán</a></li>
-                        <li><a href="/article/term.php">Chính Sách Vận Chuyển Giao Hàng</a></li>
-                        <li><a href="/article/term.php">Chính Sách Bảo Mật Thông Tin</a></li>
+                        <li><a href="term.php">Chính Sách Quy Định Chung</a></li>
+                        <li><a href="term.php">Quy Định Hình Thức Thanh Toán</a></li>
+                        <li><a href="term.php">Chính Sách Vận Chuyển Giao Hàng</a></li>
+                        <li><a href="term.php">Chính Sách Bảo Mật Thông Tin</a></li>
                     </ul>
                 </div>
                 <div class="col-md-3 mb-3">
                     <h4>Follow us</h4>
                     <div class="social mb-3">
                         <a href="#" target="_blank">
-                            <img src="images/product/ic-fb.png" alt="" border="0" />
+                            <img src="./../images/product/ic-fb.png" alt="" border="0" />
                         </a>
                         <a href="#" target="_blank">
-                            <img src="images/product/ic-instagram.png" alt="" border="0" />
+                            <img src="./../images/product/ic-instagram.png" alt="" border="0" />
                         </a>
                         <a href="#" target="_blank">
-                            <img src="images/product/ic-youtube.png" alt="" border="0" />
+                            <img src="./../images/product/ic-youtube.png" alt="" border="0" />
                         </a>
                     </div>
                     <div>
                         <a href="http://online.gov.vn/HomePage/CustomWebsiteDisplay.aspx?DocId=34289">
-                            <img src="images/product/logo-bocongthuong.png" alt="" border="0" width="120px" />
+                            <img src="./../images/product/logo-bocongthuong.png" alt="" border="0" width="120px" />
                         </a>
                     </div>
                 </div>
@@ -49,11 +49,10 @@
     </div>
 </div>
 
-<script src="js/jquery-3.6.0.min.js"></script>
-<script src="js/bootstrap.bundle.min.js"></script>
-<script src="js/jquery.bxslider.js"></script>
-<script src="js/jquery.cookie.js"></script>
-<script src="js/main.js"></script>
+<script src="./../js/jquery-3.6.0.min.js"></script>
+<script src="./../js/bootstrap.bundle.min.js"></script>
+<script src="./../js/jquery.cookie.js"></script>
+<script src="./../js/main.js"></script>
 
 </body>
 

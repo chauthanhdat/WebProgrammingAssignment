@@ -56,23 +56,22 @@
 
            
             if(isset($_SESSION['Login'])&&($_SESSION['Login'] == true)){
-            echo "<ul class='nav navbar-nav navbar-sub flex-row order-1 order-xl-0 '>
-                <li class='user-nav d-flex'>
+            echo "<ul class='nav navbar-nav navbar-sub flex-row order-1 order-xl-0 bg-dark '>
+                <li class='user-nav d-flex bg-dark'>
                     <a href='https://fitfood.vn/profile/account'>
                         <div class='avatar' style='background-image:url();'></div>
                     </a>
   
-                    <div class='dropdown'>
+                    <div class='dropdown bg-dark'>
                         <a class='btn btn-secondary dropdown-toggle' href='#' role='button' id='dropdownMenuLink' data-bs-toggle='dropdown' aria-expanded='false'>
                            <img src='https://s3.eu-central-1.amazonaws.com/bootstrapbaymisc/blog/24_days_bootstrap/fox.jpg' width='40' height='40' class='rounded-circle'>
                         </a>
 
-                        <ul class='dropdown-menu' aria-labelledby='dropdownMenuLink'>
+                        <ul class='dropdown-menu bg-dark' aria-labelledby='dropdownMenuLink'>
                             <li><a class='dropdown-item' href='#'>Action</a></li>
                             <li><a class='dropdown-item' href='#'>Another action</a></li>
-                            <li><hr class='dropdown-divider'></li>
-                            <li><form method='post'>
-                             <input type='submit' name='Logout'     value='Đăng xuất'/>
+                            <li><form method='post' clas='justify-content-center' >
+                             <input class='text-danger btn-dark ms-2 bg-dark' type='submit' name='Logout'value='Đăng xuất'/>
                             </form>
                             </li>
                         </ul>

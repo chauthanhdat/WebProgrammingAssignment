@@ -4,7 +4,7 @@ session_start();
 
 ?>
 
-// kiểm tra xem có phải là admin hay không
+
 <?php
 if (!isset($_SESSION['Login']) || ($_SESSION['UserAdmin'] == false)) {
   header('Location: warning.php');
@@ -16,7 +16,7 @@ if (!isset($_SESSION['Login']) || ($_SESSION['UserAdmin'] == false)) {
 <html lang="en">
 
 <head>
-  <title>login-form</title>
+  <title>Contact</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -34,7 +34,7 @@ if (!isset($_SESSION['Login']) || ($_SESSION['UserAdmin'] == false)) {
       ?>
       <div class="col-9 py-5 py-5">
         <!--Place content here-->
-        <div class="container mt-3">
+        <div class="container">
           <h2 class="title">Sửa những thông tin trên footer</h2>
           <form class="form-horizontal" role="form">
             <div class="form-group">
