@@ -101,15 +101,9 @@ session_start();
     </tbody>
   </table>
   <!-- <div class=""></div> -->
-<<<<<<< HEAD
-  <button type="button" class="btn btn-outline-primary" ><i class="bi bi-plus-lg"></i>ADD NEW ACCOUNT</button>
-=======
+
   <button type="button" class="btn btn-outline-danger" ><i class="bi bi-plus-lg"></i>ADD NEW ACCOUNT</button>
->>>>>>> e27b1378e94af0ba86b659f42641a65e72a8ac91
 </div>
-
-
-
 
                 <!--End content -->
             </div>

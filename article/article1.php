@@ -1,4 +1,7 @@
 <?php
+session_start();
+?>
+<?php
 include('article_header.php');
 ?>
 

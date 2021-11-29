@@ -70,9 +70,8 @@
                         <ul class='dropdown-menu bg-dark' aria-labelledby='dropdownMenuLink'>
                             <li><a class='dropdown-item' href='#'>Action</a></li>
                             <li><a class='dropdown-item' href='#'>Another action</a></li>
-                            <li><hr class='dropdown-divider'></li>
                             <li><form method='post' action='index.php'>
-                             <input type='submit' name='Logout'     value='Đăng xuất'/>
+                             <input class='mx-3 text-dark btn-danger'type='submit' name='Logout'     value='Đăng xuất'/>
                             </form>
                             </li>
                         </ul>

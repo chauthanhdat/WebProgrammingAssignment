@@ -8,7 +8,7 @@ include 'productheader.php';
     <div class="container">
       <div class="card">
         <div class="card-header text-dark">
-          <h2 >THÔNG TIN ĐƠN HÀNG</h2>
+          <h2>THÔNG TIN ĐƠN HÀNG</h2>
         </div>
         <div class="card-body">
           <div class="table-responsive">
@@ -146,10 +146,10 @@ include 'productheader.php';
         <div class="col-md-3 mb-3">
           <h4>Điều khoản chung</h4>
           <ul>
-            <li><a href="#">Chính Sách Quy Định Chung</a></li>
-            <li><a href="#">Quy Định Hình Thức Thanh Toán</a></li>
-            <li><a href="#">Chính Sách Vận Chuyển Giao Hàng</a></li>
-            <li><a href="#">Chính Sách Bảo Mật Thông Tin</a></li>
+            <li><a href="./../article/term.php">Chính Sách Quy Định Chung</a></li>
+            <li><a href="./../article/term.php">Quy Định Hình Thức Thanh Toán</a></li>
+            <li><a href="./../article/term.php">Chính Sách Vận Chuyển Giao Hàng</a></li>
+            <li><a href="./../article/term.php">Chính Sách Bảo Mật Thông Tin</a></li>
           </ul>
         </div>
         <div class="col-md-3 mb-3">
