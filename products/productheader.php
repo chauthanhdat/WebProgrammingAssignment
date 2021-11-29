@@ -56,7 +56,49 @@ session_start();
     <link rel="stylesheet" href="./../css/jquery.bxslider.min.css">
     <link rel="stylesheet" href="./../css/bootstrap.min.css">
     <link rel="stylesheet" href="./../css/style.css">
+    <style>
+        body{
+            margin-top:20px;
+            background:#eee;
+        }
+        .ui-w-40 {
+            width: 40px !important;
+            height: auto;
+        }
 
+        .card{
+            box-shadow: 0 1px 15px 1px rgba(52,40,104,.08);  
+            margin-top: 80px;  
+        }
+
+        .ui-product-color {
+            display: inline-block;
+            overflow: hidden;
+            margin: .144em;
+            width: .875rem;
+            height: .875rem;
+            border-radius: 10rem;
+            -webkit-box-shadow: 0 0 0 1px rgba(0,0,0,0.15) inset;
+            box-shadow: 0 0 0 1px rgba(0,0,0,0.15) inset;
+            vertical-align: middle;
+        }
+
+        @media only screen and (max-width: 766px) {
+            body{
+                background-color: lightblue;
+            }
+            #list-cart-title tr th{
+                display: none;
+            }
+
+        }
+        @media only screen and (max-width: 990px){
+            
+            /* .num-item::after {
+                content:"<br>";
+            } */
+        }
+    </style>
 
 </head>
 
