@@ -83,21 +83,8 @@ session_start();
             vertical-align: middle;
         }
 
-        @media only screen and (max-width: 766px) {
-            body{
-                background-color: lightblue;
-            }
-            #list-cart-title tr th{
-                display: none;
-            }
 
-        }
-        @media only screen and (max-width: 990px){
-            
-            /* .num-item::after {
-                content:"<br>";
-            } */
-        }
+
     </style>
 
 </head>

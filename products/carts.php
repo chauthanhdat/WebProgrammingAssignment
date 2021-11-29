@@ -173,7 +173,17 @@
     </div>
 </div>
 
+<style>
+          @media only screen and (max-width: 766px) {
+            body{
+                background-color: lightblue;
+            }
+            #list-cart-title tr th{
+                display: none;
+            }
 
+        }
+</style>
 
   <script>
  
