@@ -11,27 +11,23 @@
 <?php
     include './inc/header_admin.php'
     ?>
-    <div class="container-fluid">
-        <div class="row flex-nowrap">
+     <div class="container-fuild">
+     <div class=" row flex-nowrap ">
             <?php
             include './inc/sidebar_admin.php'
             ?>
-            <div class="col py-3">
+            <div class="col-9 py-5 px-5">
                 <!--Place content here-->
-
-                <h1>Xóa,sửa comment</h1>
+                <h2 class="title">Xóa,sửa comment</h2>
                 <!--End content -->
             </div>
         </div>
-    </div>
-
-
-
-
-
-
+     </div>
+        
+    
 
 
 <script src="js/bootstrap.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+</html>

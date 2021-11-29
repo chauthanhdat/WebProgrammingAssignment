@@ -1,3 +1,8 @@
+ <?php 
+  //  include 'productheader.php';
+?> 
+
+
 <?php
 session_start();
 ?>
@@ -30,14 +35,6 @@ session_start();
         mysqli_close($connection);
     //}
     
-    $temp =1;
-    if (!isset($_SESSION['Login'])||$_SESSION['Login']==false){
-        $temp=0;
-        
-    }
-    echo "<script> var login_js= $temp; </script>";
-    
-    unset($temp);
 
 ?>
 
@@ -56,7 +53,14 @@ session_start();
     <link rel="stylesheet" href="./../css/jquery.bxslider.min.css">
     <link rel="stylesheet" href="./../css/bootstrap.min.css">
     <link rel="stylesheet" href="./../css/style.css">
+    <style>
+        @media only screen and (max-width: 767.98px) { 
+            .bill-header{
+                display: none;
+            }
+         }
 
+    </style>
 
 </head>
 
@@ -99,7 +103,7 @@ session_start();
 
            
 if(isset($_SESSION['Login'])&&($_SESSION['Login'] == true)){
-echo "<ul class='nav navbar-nav navbar-sub flex-row order-1 order-xl-0 '>
+    echo "<ul class='nav navbar-nav navbar-sub flex-row order-1 order-xl-0 '>
     <li class='user-nav d-flex'>
         <a href='https://fitfood.vn/profile/account'>
             <div class='avatar' style='background-image:url();'></div>
@@ -124,18 +128,41 @@ echo "<ul class='nav navbar-nav navbar-sub flex-row order-1 order-xl-0 '>
 </ul>";
 }else{
 
-echo "<ul class='nav navbar-nav navbar-sub order-1 order-xl-0 '>                
-<li class='nav-item'><a id='btn-register' class='nav-link' href='../register.php'>Đăng ký</a></li>
-<li class='nav-item '><a id='btn-login' class='nav-link' href='../login.php'>Đăng nhập</a></li>
-</ul>";
+    echo "<ul class='nav navbar-nav navbar-sub order-1 order-xl-0 '>                
+    <li class='nav-item'><a id='btn-register' class='nav-link' href='./register.php'>Đăng ký</a></li>
+    <li class='nav-item '><a id='btn-login' class='nav-link' href='./login.php'>Đăng nhập</a></li>
+    </ul>";
 }
     ?>
-
-
-
-
-
             </div>
         </div>
 
     </nav>
+
+
+    <div class="container top-inner">
+
+        <div class="bill-header row text-center" style="border-bottom:1px solid black">
+            <h5 class="text-danger col-md-6">Tên sản phẩm</h5>
+            <h5 class="col-md-2 text-dark">Dơn giá</h5>
+            <h5 class="col-md-1 text-dark">số lượng</h5>
+            <h5 class="col-md-3 text-dark">Thành tiền</h5>
+        </div>
+        <div class="row">   
+            <div class="col-md-3">
+                <img src="https://fitfood.vn/img/500x315/images/fitpack-chickenbox-16374709302476.jpg" alt="" >
+            </div> 
+            <div class="text-dark col-md-3">combo uc gà</div>
+            <h6 class="col-md-6 ">100000</h6>
+        
+            
+            
+        </div>
+
+    </div>
+
+
+
+<?php 
+    include 'productfooter.php';
+?>

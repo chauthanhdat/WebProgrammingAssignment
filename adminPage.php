@@ -3,12 +3,12 @@ session_start();
 
 ?>
 
-// kiểm tra xem có phải là admin hay không
 <?php 
     if(!isset($_SESSION['Login'])||($_SESSION['UserAdmin']==false)){
       header('Location: warning.php');
     }
 ?> 
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -16,7 +16,7 @@ session_start();
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/adminPage.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
     <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet"> -->
 
     <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"> -->
@@ -92,10 +92,10 @@ session_start();
             </div>
 </div>
 </div>
-
 <script src="js/bootstrap.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+</html>
 
 
     

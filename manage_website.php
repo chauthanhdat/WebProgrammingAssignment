@@ -28,9 +28,9 @@ session_start();
             <?php
             include './inc/sidebar_admin.php'
             ?>
-            <div class="col py-3">
+            <div class=" col-9 py-5 px-5">
                 <!--Place content here-->
-                <h1>Hiện thực các tính năng quản lí tài nguyên trang web</h1>
+                <h2 class="title">Hiện thực các tính năng quản lí tài nguyên trang web</h2>
                 <!--End content -->
             </div>
         </div>

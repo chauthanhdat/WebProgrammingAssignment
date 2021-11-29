@@ -1,54 +1,50 @@
 
 
 
-
-
-
-
-
-
 <div class=" pb-0">
    
    <div class="container">
         <!-- thực phẩm chế biến ăn liền -->
        <div class="danh-muc mt-5 pt-5">
-           <h2 class="text-dark title-center pb-3 mb-3 h1">CHẾ BIẾN SẴN</h2>
+           <h2 class="title title-center text-dark">CHẾ BIẾN SẴN</h2>
    
            <div class="row justify-content-md-center" >
 
                <div class="col-md-3">
-                   <a href="https://fitfood.vn/product/19/box-uc-ga-mem-mong" class="link" style="text-decoration: none">
+                   <a href="./boxchicken.php" class="link" style="text-decoration: none">
                        <div class="card" >
                            <img class="card-img-top" src="https://fitfood.vn/img/500x315/images/fitpack-chickenbox-16374709302476.jpg" alt="Card image cap">
                            <div class="card-body">
-                           <h5 class="card-title">Combo ức gà</h5>
-                               <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                           <h5 class="card-title text-dark">Combo ức gà</h5>
+                                <span class="text-dark">Giá :</span> 
+                                <span class="text-danger">180,000 VND</span>  
+                               <p class="card-text text-secondary">Thơm ngon đủ vị, giá trị dinh dưỡng, giàu protein.</p>
                            </div>
                        </div>
                    </a>
                </div>
 
                <div class="col-md-3">
-                   <a href="https://fitfood.vn/product/17/06-goi-uc-ga-an-lien" class="link" style="text-decoration: none">
+                   <a href="./packchicken.php" class="link" style="text-decoration: none">
                        <div class="card" >
                            <img class="card-img-top" src="https://fitfood.vn/img/500x315/images/6chicken-16374707869418.jpg" alt="Card image cap">
                            <div class="card-body">
-                           <h5 class="card-title">Ức gà thơm lừng</h5>
-                               <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                           <h5 class="card-title text-dark">Ức gà thơm lừng</h5>
+                                <span class="text-dark">Giá :</span> 
+                               <span class="text-danger">180,000 VND</span>  
+                               <p class="card-text text-secondary">Đậm vị thơm lừng, ăn hoài không ngán,.</p>
                            </div>
                        </div>
                    </a>
                </div>
 
                <div class="col-md-3">
-                   <a href="https://fitfood.vn/product/18/06-burger-ga-teriyaki" class="link" style="text-decoration: none">
-                           <span class="icon">
-                               <i class="fa fa-check" aria-hidden="true"></i>
-                           </span>
+                   <a href="./burger.php" class="link" style="text-decoration: none">
+                           
                            <div class="card" >
                            <img class="card-img-top" src="https://fitfood.vn/img/500x315/images/burger-16374709014232.jpg" alt="Card image cap">
                            <div class="card-body">
-                           <h5 class="card-title">Buger gà xốt</h5> 
+                           <h5 class="card-title text-dark">Buger gà xốt</h5> 
                                <span class="text-dark">Giá :</span> 
                                <span class="text-danger">180,000 VND</span>                  
                                <p class="card-text text-secondary">Thơm ngon béo ngậy dai gòn sần sật</p>
@@ -61,77 +57,75 @@
        </div>
 
        <div class="danh-muc mt-5 pt-5">
-           <h2 class="text-dark title-center pb-3 mb-3 h1">NƯỚC GIẢI KHÁT</h2>
+           <h2 class="title title-center text-dark">NƯỚC GIẢI KHÁT</h2>
            <div class="row justify-content-md-center" >
-
                <div class="col-md-3">
-                   <a href="https://fitfood.vn/product/1/fitfood-juice-sweetie" class="link" style="text-decoration: none">
-                       <span class="icon"><i class="fa fa-check" aria-hidden="true"></i></span>
+                   <a href="./sweetie.php" class="link" style="text-decoration: none">
+                       
                        <div class="card">
                            <img src="https://fitfood.vn/img/500x315/images/fit-web-combo-sweetie-new-15985103893515.jpg" class="card-img-top" alt="">
                            <div class="card-body">
-                               <h5 class="card-title">Buger gà xốt</h5> 
+                               <h5 class="card-title text-dark">FITFOOD JUICE SWEETIE</h5> 
                                <span class="text-dark">Giá :</span> 
-                               <span class="text-danger">180,000 VND</span>                  
-                               <p class="card-text text-secondary">Thơm ngon béo ngậy dai gòn sần sật</p>
+                               <span class="text-danger"><?php  echo number_format($_SESSION['food_arr_price']['SWEETIE']);?> VND</span>                  
+                               <p class="card-text text-secondary">Bổ sung vitamin khoáng chất</p>
                            </div>
                        </div>
                    </a>
                </div>
 
                <div class="col-md-3">
-                   <a href="https://fitfood.vn/product/1/fitfood-juice-sweetie" class="link" style="text-decoration: none">
-                           <span class="icon"><i class="fa fa-check" aria-hidden="true"></i></span>
+                   <a href="./greenie.php" class="link" style="text-decoration: none">
+                           
                            <div class="card">
-                               <img src="https://fitfood.vn/img/500x315/images/fit-web-combo-sweetie-new-15985103893515.jpg" class="card-img-top" alt="">
+                               <img src="https://fitfood.vn/img/500x315/images/fit-web-combo-greenienew-15985103974998.jpg" class="card-img-top" alt="">
                                <div class="card-body">
-                                   <h5 class="card-title">Buger gà xốt</h5> 
+                                   <h5 class="card-title text-dark">FITFOOD JUICE GREENIE</h5> 
                                    <span class="text-dark">Giá :</span> 
-                                   <span class="text-danger">180,000 VND</span>                  
-                                   <p class="card-text text-secondary">Thơm ngon béo ngậy dai gòn sần sật</p>
+                                   <span class="text-danger"><?php  echo number_format($_SESSION['food_arr_price']['GREENIE']);?> VND</span>                  
+                                   <p class="card-text text-secondary">Thanh lọc cơ thể tươi tắn bên trong, trẻ đẹp bên ngoài</p>
                                </div>
                            </div>
                    </a>
                </div>
 
                <div class="col-md-3">
-                   <a href="https://fitfood.vn/product/1/fitfood-juice-sweetie" class="link" style="text-decoration: none">
-                           <span class="icon"><i class="fa fa-check" aria-hidden="true"></i></span>
+                   <a href="./kombucha.php" class="link" style="text-decoration: none">
+                           
                            <div class="card">
-                               <img src="https://fitfood.vn/img/500x315/images/fit-web-combo-sweetie-new-15985103893515.jpg" class="card-img-top" alt="">
+                               <img src="https://fitfood.vn/img/500x315/images/fit-combo-500x315-16009329054581.jpg" class="card-img-top" alt="">
                                <div class="card-body">
-                                   <h5 class="card-title">Buger gà xốt</h5> 
+                                   <h5 class="card-title text-dark">STAR KOMBUCHA</h5> 
                                    <span class="text-dark">Giá :</span> 
-                                   <span class="text-danger">180,000 VND</span>                  
-                                   <p class="card-text text-secondary">Thơm ngon béo ngậy dai gòn sần sật</p>
+                                   <span class="text-danger"><?php  echo number_format($_SESSION['food_arr_price']['KOMBUCHA']);?> VND</span>                  
+                                   <p class="card-text text-secondary">Chua chua ngọt ngọt bổ sung lợi khuẩn</p>
                                </div>
                            </div>
                        </a>
                </div>
                <div class="col-md-3">
-                   <a href="https://fitfood.vn/product/1/fitfood-juice-sweetie" class="link" style="text-decoration: none">
-                           <span class="icon"><i class="fa fa-check" aria-hidden="true"></i></span>
+                   <a href="./healthy.php" class="link" style="text-decoration: none">
                            <div class="card">
-                               <img src="https://fitfood.vn/img/500x315/images/fit-web-combo-sweetie-new-15985103893515.jpg" class="card-img-top" alt="">
+                               <img src="https://fitfood.vn/img/500x315/images/fit-snacks-500x315-8-15777698599208.jpg" class="card-img-top" alt="">
                                <div class="card-body">
-                                   <h5 class="card-title">Buger gà xốt</h5> 
+                                   <h5 class="card-title text-dark">Sữa HẠT HEALTHY</h5> 
                                    <span class="text-dark">Giá :</span> 
-                                   <span class="text-danger">180,000 VND</span>                  
-                                   <p class="card-text text-secondary">Thơm ngon béo ngậy dai gòn sần sật</p>
+                                   <span class="text-danger"><?php  echo number_format($_SESSION['food_arr_price']['HEALTHY']);?> VND</span>                  
+                                   <p class="card-text text-secondary">Vóc dáng thon gọn, sức khỏe dẻo dai</p>
                                </div>
                            </div>
                        </a>
                </div>
                <div class="col-md-3">
-                   <a href="https://fitfood.vn/product/1/fitfood-juice-sweetie" class="link" style="text-decoration: none">
-                           <span class="icon"><i class="fa fa-check" aria-hidden="true"></i></span>
+                   <a href="./kombucha.php" class="link" style="text-decoration: none">
+                           
                            <div class="card">
-                               <img src="https://fitfood.vn/img/500x315/images/fit-web-combo-sweetie-new-15985103893515.jpg" class="card-img-top" alt="">
+                               <img src="https://fitfood.vn/img/500x315/images/fit-combo-500x315-16009329054581.jpg" class="card-img-top" alt="">
                                <div class="card-body">
-                                   <h5 class="card-title">Buger gà xốt</h5> 
+                                   <h5 class="card-title text-dark">STAR KOMBUCHA</h5> 
                                    <span class="text-dark">Giá :</span> 
-                                   <span class="text-danger">180,000 VND</span>                  
-                                   <p class="card-text text-secondary">Thơm ngon béo ngậy dai gòn sần sật</p>
+                                   <span class="text-danger"><?php  echo number_format($_SESSION['food_arr_price']['KOMBUCHA']);?> VND</span>                  
+                                   <p class="card-text text-secondary">Chua chua ngọt ngọt bổ sung lợi khuẩn</p>
                                </div>
                            </div>
                        </a>
@@ -141,18 +135,17 @@
        </div>
 
        <div class="danh-muc mt-5 pt-5">
-           <h2 class="text-dark title-center pb-3 mb-3 h1">SNACK HEALTHY</h2>
+           <h2 class="title title-center text-dark">SNACK HEALTHY</h2>
            <div class="row justify-content-md-center" >
 
                <div class="col-md-4">
-                   <a href="https://fitfood.vn/product/1/fitfood-juice-sweetie" class="link" style="text-decoration: none">
-                       <span class="icon"><i class="fa fa-check" aria-hidden="true"></i></span>
+                   <a href="./tempeh.php" class="link" style="text-decoration: none">
                        <div class="card">
-                           <img src="https://fitfood.vn/img/500x315/images/fit-web-combo-sweetie-new-15985103893515.jpg" class="card-img-top" alt="">
+                           <img src="https://fitfood.vn/img/500x315/images/fit-snacks-500x315-5-1577769905295.jpg" class="card-img-top" alt="">
                            <div class="card-body">
-                               <h5 class="card-title">Buger gà xốt</h5> 
+                               <h5 class="card-title text-dark">Tempeh Tương Nén</h5> 
                                <span class="text-dark">Giá :</span> 
-                               <span class="text-danger">180,000 VND</span>                  
+                               <span class="text-danger"><?php  echo number_format($_SESSION['food_arr_price']['TEMPEH']);?> VND</span>                  
                                <p class="card-text text-secondary">Thơm ngon béo ngậy dai gòn sần sật</p>
                            </div>
                        </div>
@@ -161,14 +154,13 @@
 
                <div class="col-md-4">
                    <a href="https://fitfood.vn/product/1/fitfood-juice-sweetie" class="link" style="text-decoration: none">
-                       <span class="icon"><i class="fa fa-check" aria-hidden="true"></i></span>
                        <div class="card">
                            <img src="https://fitfood.vn/img/500x315/images/fit-snacks-500x315-2-15777698786894.jpg" class="card-img-top" alt="">
                            <div class="card-body">
-                               <h5 class="card-title">Buger gà xốt</h5> 
+                               <h5 class="card-title text-dark">Cookie lành mạnh</h5> 
                                <span class="text-dark">Giá :</span> 
-                               <span class="text-danger">180,000 VND</span>                  
-                               <p class="card-text text-secondary">Thơm ngon béo ngậy dai gòn sần sật</p>
+                               <span class="text-danger"><?php  echo number_format($_SESSION['food_arr_price']['BANH QUY']);?> VND</span>                  
+                               <p class="card-text text-secondary">Dập tan cơn đói, nhưng không lo tăng cân</p>
                            </div>
                        </div>
                    </a>
@@ -184,7 +176,7 @@
    </div>
    <div class="featured-product mt-5 pt-5 bg-danger rounded mb-0 " >
            <div class="container-fluid">
-               <h2 class="text-white title title-center pb-3 mb-3 h1">GÓI ĂN LÀNH MẠNH</h2>
+               <h2 class="title title-center text-white">GÓI ĂN LÀNH MẠNH</h2>
                <div class="products">
                    <ul class="bxslider">
                        <li>
@@ -352,18 +344,18 @@
                     <h4>Follow us</h4>
                     <div class="social mb-3">
                         <a href="#" target="_blank">
-                            <img src="images/product/ic-fb.png" alt="" border="0" />
+                            <img src="../images/product/ic-fb.png" alt="" border="0" />
                         </a>
                         <a href="#" target="_blank">
-                            <img src="images/product/ic-instagram.png" alt="" border="0" />
+                            <img src="../images/product/ic-instagram.png" alt="" border="0" />
                         </a>
                         <a href="#" target="_blank">
-                            <img src="images/product/ic-youtube.png" alt="" border="0" />
+                            <img src="../images/product/ic-youtube.png" alt="" border="0" />
                         </a>
                     </div>
                     <div>
                         <a href="http://online.gov.vn/HomePage/CustomWebsiteDisplay.aspx?DocId=34289">
-                            <img src="images/product/logo-bocongthuong.png" alt="" border="0" width="120px" />
+                            <img src="../images/product/logo-bocongthuong.png" alt="" border="0" width="120px" />
                         </a>
                     </div>
                 </div>
@@ -372,7 +364,18 @@
         <p class="copyright mb-0">© Copyright Fitfood.</p>
     </div>
 </div>
-
+<script>
+    function check_login(){
+        
+        if (login_js==0){ //chưa dăng nhpa65
+            alert('bạn cần phải đăng nhập trước');
+            return false;
+        }
+        else{
+            return true;
+        }
+    }
+</script>
 <script src="./../js/jquery-3.6.0.min.js"></script>
 <script src="./../js/bootstrap.bundle.min.js"></script>
 <script src="./../js/jquery.bxslider.js"></script>

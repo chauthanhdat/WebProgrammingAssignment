@@ -7,8 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="lang" content="vi">
     <title>Fitfood VN</title>
-    <link rel="icon" href="favicon.ico">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700" rel="stylesheet">
+    <link rel="icon" href="/images/product/favicon.ico">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+    <link href="fonts/Montserrat.css" rel="stylesheet">
     <script src="js/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="css/jquery.bxslider.min.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -17,13 +18,10 @@
 
 <body>
     <nav class="navbar navbar-expand-xl navbar-dark bg-dark fixed-top">
-        <div class="container-fluid">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-navigation" aria-controls="main-navigation" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <a class="navbar-brand " href="index.php"><img src="images/product/logo-fitfood.png" alt="" /></a>
-
-
             <div class="collapse navbar-collapse " id="main-navigation">
                 <ul class="nav navbar-nav mr-auto ml-xl-auto order-2 order-xl-0">
                     <li class="nav-item">
@@ -61,8 +59,8 @@
                 </ul>
                 </ul>
             </li>
-
-            </div>
         </div>
 
     </nav>
+</body>
+</html>

@@ -77,6 +77,39 @@ button {
     }
 }
 
+.dropdown-menu li a.dropdown-item {
+    font-family: "Montserrat", sans-serif;
+    color: #FFFFFF!important;
+    font-size: 0.7rem;
+}
+
+.dropdown-menu li a.dropdown-item:hover {
+    font-size: 0.7rem;
+    color: #FF2033 !important;
+    background-color: #141414;
+}
+
+#slidebar .nav-link {
+    font-family: "Montserrat", sans-serif;
+    color: #FFFFFF!important;
+    font-size: 0.7rem;
+}
+
+#slidebar .nav-link:hover {
+    font-family: "Montserrat", sans-serif;
+    color: #FF2033!important;
+    font-size: 0.7rem;
+}
+
+@media (min-width: 992px) {
+    #slidebar .nav-link {
+        font-size: 1rem;
+    }
+    #slidebar .nav-link:hover {
+        font-size: 1rem;
+    }
+}
+
 
 /*footer*/
 
@@ -161,8 +194,15 @@ button {
     display: block;
 }
 
-#main-banner .title:after {
+#main-banner .title:after,
+#warning h2.title:after {
     display: none;
+}
+
+#warning h2.title {
+    margin-bottom: 0;
+    font-weight: 700;
+    color: #141414;
 }
 
 

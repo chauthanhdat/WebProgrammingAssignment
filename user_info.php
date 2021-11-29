@@ -3,7 +3,7 @@ session_start();
 
 ?>
 
-// kiểm tra xem có phải là admin hay không
+
 <?php 
     if(!isset($_SESSION['Login'])||($_SESSION['UserAdmin']==false)){
       header('Location: warning.php');
@@ -30,10 +30,10 @@ session_start();
             <?php
             include './inc/sidebar_admin.php'
             ?>
-            <div class="col py-3">
+            <div class="col-9 py-5 px-5">
                 <!--Place content here-->
                 <div class="container mt-3">
-                <h2>Thông tin khách hàng</h2>
+                <h2 class="title">Thông tin khách hàng</h2>
                 <!-- <form class="form-horizontal" role="form">
                           <div class="form-group">
                             
@@ -59,10 +59,7 @@ session_start();
                               <input class="form-control" type="text" value="Tên:Nguyễn Văn D;username:chicken4;password:123456;phone number:0123456789;email:nguyenvand@gmail.com">
                             </div>
                           </div> -->
-                <ul>Link tham khảo display data from data base:</ul>
-                <li>https://tryphp.w3schools.com/showphpfile.php?filename=demo_db_select_oo_table</li>
-                <li>https://www.w3schools.com/php/php_mysql_select.asp</li>
-                <li>https://stackoverflow.com/questions/17902483/show-values-from-a-mysql-database-table-inside-a-html-table-on-a-webpage</li>
+                
                 <table class="table">
     <thead>
       <tr>
@@ -75,7 +72,49 @@ session_start();
       </tr>
     </thead>
     <tbody>
-      <tr>
+
+    <?php
+  // thông tin ket nối db
+    $dbservername = "localhost";
+    $dbusername = "root";
+    $dbname = "fitfooddb";
+   //tạo kết nối
+    $connection = mysqli_connect($dbservername, $dbusername, "", $dbname);
+    if (!$connection){
+        echo "kết nối với csdl thất bại: " . mysqli_connect_error();
+        exit;
+    }
+    //trở lên 
+
+    
+
+    $sql_query = "SELECT * FROM users";
+    $query_result = mysqli_query($connection, $sql_query);
+    
+    while ($row = mysqli_fetch_assoc($query_result)) {
+       
+        echo "<tr>
+        <td>{$row['ur_name']}</td>
+        <td>{$row['ur_account']}</td>
+        <td>{$row['ur_email']}</td>
+        <td>{$row['ur_phone']}</td>
+        <td><button type='button' class='btn btn-outline-dark'><i class='bi bi-trash-fill'></i> Delete</button></td>
+        <td><button type='button' class='btn btn-outline-dark'><i class='bi bi-arrow-clockwise'></i> Reser password</button></td>
+      </tr>";
+
+    }
+
+
+
+
+
+
+    mysqli_close($connection);
+?>
+
+
+
+      <!-- <tr>
         <td>Chicken1</td>
         <td>User1</td>
         <td>user1@example.com</td>
@@ -98,7 +137,7 @@ session_start();
         <td>0123456789</td>
         <td><button type="button" class="btn btn-outline-dark"><i class="bi bi-trash-fill"></i> Delete</button></td>
         <td><button type="button" class="btn btn-outline-dark"><i class="bi bi-arrow-clockwise"></i> Reser password</button></td>
-      </tr>
+      </tr> -->
     </tbody>
   </table>
   <!-- <div class=""></div> -->
