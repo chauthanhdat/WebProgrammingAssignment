@@ -6,8 +6,6 @@
 
 <?php 
 
-  
-
     //them vao gio hang
     if(isset($_POST['submit'])){
 
