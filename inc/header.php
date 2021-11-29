@@ -34,7 +34,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">
+                        <a class="nav-link" href="./products/carts.php">
                             Đặt hàng
                         </a>
                     </li>
@@ -51,12 +51,12 @@
                         </a>
                     </li>
                 </ul>
-                <?php 
+                <?php
 
 
-           
-            if(isset($_SESSION['Login'])&&($_SESSION['Login'] == true)){
-            echo "<ul class='nav navbar-nav navbar-sub flex-row order-1 order-xl-0 bg-dark '>
+
+                if (isset($_SESSION['Login']) && ($_SESSION['Login'] == true)) {
+                    echo "<ul class='nav navbar-nav navbar-sub flex-row order-1 order-xl-0 bg-dark '>
                 <li class='user-nav d-flex bg-dark'>
                     <a href='https://fitfood.vn/profile/account'>
                         <div class='avatar' style='background-image:url();'></div>
@@ -70,27 +70,23 @@
                         <ul class='dropdown-menu bg-dark' aria-labelledby='dropdownMenuLink'>
                             <li><a class='dropdown-item' href='#'>Action</a></li>
                             <li><a class='dropdown-item' href='#'>Another action</a></li>
-                            <li><form method='post' clas='justify-content-center' >
-                             <input class='text-danger btn-dark ms-2 bg-dark' type='submit' name='Logout'value='Đăng xuất'/>
+                            <li><hr class='dropdown-divider'></li>
+                            <li><form method='post' action='index.php'>
+                             <input type='submit' name='Logout'     value='Đăng xuất'/>
                             </form>
                             </li>
                         </ul>
                     </div>
                 </li>
             </ul>";
-        }else{
-            
-            echo "<ul class='nav navbar-nav navbar-sub order-1 order-xl-0 '>                
+                } else {
+
+                    echo "<ul class='nav navbar-nav navbar-sub order-1 order-xl-0 '>                
             <li class='nav-item'><a id='btn-register' class='nav-link' href='./register.php'>Đăng ký</a></li>
             <li class='nav-item '><a id='btn-login' class='nav-link' href='./login.php'>Đăng nhập</a></li>
         </ul>";
-        }
+                }
                 ?>
-
-
-
-
-
             </div>
         </div>
 

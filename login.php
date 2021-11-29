@@ -1,6 +1,6 @@
 <?php
 session_start();
-if (!isset($_SESSION['Login'])) {
+if (!isset($_SESSION['Login'])||$_SESSION['Login']==false) {
     $_SESSION['Login'] = false;
 }
 // if(!isset($_SESSION['NumofLogin'])){
@@ -62,12 +62,14 @@ if (isset($_POST['submit'])) {
         //sleep(10);
         // header("Location:login.php");
     }else if($_SESSION['UserAdmin']==true){
-        header('Location: adminPage.php');
         unset($_POST);
+        header('Location: adminPage.php');
+        
     }
      else {
-        header('Location: index.php');
         unset($_POST);
+        header('Location: index.php');
+        
     }
 }
 

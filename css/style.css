@@ -349,10 +349,11 @@
         padding: 1.375rem 1rem;
     }
     
-    .products .card .card-body .card-title {
+    .products .card .card-body .card-title,
+    .media .media-body a.card-title {
         font-weight: 600;
         font-size: 1.125rem;
-        color: #2F2F2F;
+        color: #2F2F2F!important;
     }
     
     .products .card .card-body .card-title span {
@@ -434,4 +435,48 @@
     
     form ::placeholder {
         font-size: 0.9rem
+    }
+    /*cart*/
+    
+    .card {
+        box-shadow: 0 1px 15px 1px rgba(52, 40, 104, .08);
+        margin-top: 80px;
+    }
+    
+    .ui-product-color {
+        display: inline-block;
+        overflow: hidden;
+        margin: .144em;
+        width: .875rem;
+        height: .875rem;
+        border-radius: 10rem;
+        -webkit-box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15) inset;
+        box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15) inset;
+        vertical-align: middle;
+    }
+    
+    .cart-img {
+        width: 40px!important;
+    }
+    
+    @media (min-width: 768px) {
+        .cart-img {
+            width: 150px!important;
+        }
+    }
+    
+    @media (min-width: 1200px) {
+        .cart-img {
+            width: 250px!important;
+        }
+    }
+    
+    .cart-title {
+        text-decoration: none;
+        color: #141414;
+        font-weight: 700;
+    }
+    
+    .cart-title:hover {
+        text-decoration: underline;
     }
