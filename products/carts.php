@@ -34,6 +34,9 @@ if (!isset($_SESSION['Login']) || $_SESSION['Login'] == false) {
         }
         $temp_cart_id=$_POST['delete_cart_id_it'];
         $temp_food_name=$_POST['delete_cart_name_it'];
+        //echo "<h1> <br><br><br>$temp_food_name</h1>";
+        $temp_food_name=str_replace("_"," ",$temp_food_name);
+        //echo $temp_food_name;
         // echo "<h1><br><br>$temp_cart_id</h1>";
         // echo "<h1><<br>$temp_food_name</h1>";
         $sql_query =" DELETE FROM `cart_it` WHERE `crt_id` = $temp_cart_id and `fd_name`= '$temp_food_name';";
@@ -100,11 +103,15 @@ if (!isset($_SESSION['Login']) || $_SESSION['Login'] == false) {
     for ($i = 0; $i < $temp_num_row; $i++) {
       //echo "<h1><br><br><br><br>{$_SESSION['food_list'][1]}</h1>";
       $temp = $_SESSION['food_list'][$i];
+      $temp_food=$temp;
       //  echo "<h1><br><br><br><br>$temp</h1>";
-      // echo "<h1><br><br><br><br>$_POST[$temp]</h1>";
+      //echo "<h1><br><br><br><br>$_POST[$temp]</h1>";
+      //echo "<h1>-- $temp</h1>";
+      $temp=str_replace(" ","_",$temp) ;
+      //echo "<h1>++ $temp</h1>";
       $temp_num = $_POST[$temp];
-
-      $sql_query = "UPDATE `cart_it` set `num`= $temp_num where crt_id= $temp_cart_id and fd_name ='$temp';";
+      $sql_query = "UPDATE `cart_it` set `num`= $temp_num where crt_id= $temp_cart_id and fd_name ='$temp_food';";
+      //echo $sql_query;
       $query_result = mysqli_query($connection, $sql_query);
     }
 
@@ -251,12 +258,12 @@ if (!isset($_SESSION['Login']) || $_SESSION['Login'] == false) {
                             </div>
                           </td>
                           <td class='text-right font-weight-semibold align-middle p-4 text-success'  >" . $row['food_price'] . "</td>
-                          <td class='align-middle p-4 ' ><input name='" . $row['fd_name'] . "' form='confirm_cart' id='product-" . $i . "' type='number' class='form-control text-center' min='1' value='" . $row['num'] . "' onchange='change_value(\"product-" . $i . "\");' ></td>
+                          <td class='align-middle p-4 ' ><input name='" .str_replace(" ","_",$row['fd_name']) . "' form='confirm_cart' id='product-" . $i . "' type='number' class='form-control text-center' min='1' value='" . $row['num'] . "' onchange='change_value(\"product-" . $i . "\");' ></td>
                           <td class='text-right font-weight-semibold align-middle p-4 text-danger' >" . ($row['food_price'] * $row['num']) . "VND</td>
                           <td class='text-center align-middle px-0'>
                             <form action='' method='post'  name='delete_it' id='delete_it'>
                               <input type='hidden' id='delete-cart-id-hidden' name='delete_cart_id_it' value='" . $cart_info['cart_id'] . "'>
-                              <input type='hidden' id='delete-cart-name-hidden' name='delete_cart_name_it' value='" . $row['fd_name'] . "'>
+                              <input type='hidden' id='delete-cart-name-hidden' name='delete_cart_name_it' value='" . str_replace(" ","_",$row['fd_name']) ."'>
                               <button type='submit' class='btn btn-lg btn-danger'  name='delete_it_bt' >Xóa</button>
                             </form>
                           </td>
