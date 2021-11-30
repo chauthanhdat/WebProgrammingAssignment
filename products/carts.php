@@ -117,29 +117,7 @@ if (!isset($_SESSION['Login']) || $_SESSION['Login'] == false) {
   ?>
 
 
-  <?php
-  // xoa item trong cart
-  if (isset($_POST['delete_it_bt'])) {
-    $dbservername = "localhost";
-    $dbusername = "root";
-    $dbname = "fitfooddb";
-    $connection = mysqli_connect($dbservername, $dbusername, "", $dbname);
-    if (!$connection) {
-      echo "kết nối với csdl thất bại: " . mysqli_connect_error();
-      exit;
-    }
-    $temp_cart_id = $_POST['delete_cart_id_it'];
-    $temp_food_name = $_POST['delete_cart_name_it'];
-    // echo "<h1><br><br>$temp_cart_id</h1>";
-    // echo "<h1><<br>$temp_food_name</h1>";
-    $sql_query = " DELETE FROM `cart_it` WHERE `crt_id` = $temp_cart_id and `fd_name`= '$temp_food_name';";
-    // echo "<h1><<br>$sql_query</h1>";
-    $query_result = mysqli_query($connection, $sql_query);
 
-    unset($_POST['delete_it_bt']);
-    mysqli_close($connection);
-  }
-  ?>
 
   <?php
   function get_food_link($food_name)
@@ -333,8 +311,26 @@ if (!isset($_SESSION['Login']) || $_SESSION['Login'] == false) {
 
   <?php } else { ?>
     <!-- ko dữ liệu có  -->
-    <div class="top-inner"></div>
-    <h1 class="title-center py-3">Chưa có dữ liệu</h1>
+    <div class="top-inner">
+        <h1 class="text-center py-3">Giỏ hàng hiện tại đang rỗng</h1>
+        <h6 class="text-center title-center">Vui lòng quay lại trang chủ để thêm sản phẩm vào giỏ hàng</h6>
+        <div class='d-flex justify-content-center mt-3 '>
+            <button onclick="window.location.href='../index.php'" class =' btn btn-outline-success'>Quay về trang chủ</button>
+        </div>
+        
+        <div
+          class="bg-image p-5 text-center shadow-1-strong rounded mb-5 bg-white"
+          style="background-image: url('../images/user_avatar/emptycart_1.png');height: 50vh;
+                background-repeat: no-repeat;
+                background-position: center; 
+          "
+        >
+           
+            
+        </div>
+
+    </div>
+    <!-- <h1 class="title-center py-3">Chưa có dữ liệu</h1> -->
   <?php } ?>
 
 <?php } //footer after this  

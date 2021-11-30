@@ -84,7 +84,7 @@ include './inc/header.php';
                         <h1 class="title title-center">
                             <small>Kế hoạch bữa ăn hàng tuần cho </small> một lối sống lành mạnh
                         </h1>
-                        <a href="#r" class="btn btn-danger">Đặt Ngay</a>
+                        <a href="./products/healthy.php" class="btn btn-danger">Đặt Ngay</a>
                     </div>
                 </div>
             </div>
@@ -95,7 +95,7 @@ include './inc/header.php';
                         <h1 class="title title-center">
                             Trải nghiệm bữa ăn sạch <small>tươi ngon giàu dinh dưỡng</small>
                         </h1>
-                        <a href="#" class="btn btn-danger">Đặt Ngay</a>
+                        <a href="./products/burger.php" class="btn btn-danger">Đặt Ngay</a>
                     </div>
                 </div>
             </div>
