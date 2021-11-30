@@ -91,8 +91,9 @@ session_start();
     $sql_query = "SELECT * FROM users";
     $query_result = mysqli_query($connection, $sql_query);
     
-    while ($row = mysqli_fetch_assoc($query_result)) {
-       
+    while ($row = mysqli_fetch_assoc($query_result)) 
+    {
+       if ($row['admin']!=1)
         echo "<tr>
         <td>{$row['ur_name']}</td>
         <td>{$row['ur_account']}</td>
@@ -141,7 +142,7 @@ session_start();
     </tbody>
   </table>
   <!-- <div class=""></div> -->
-  <button type="button" class="btn btn-outline-primary" ><i class="bi bi-plus-lg"></i>ADD NEW ACCOUNT</button>
+  <button type="button" class="btn btn-outline-primary" ><a href="add_more_user.php" ><i class="bi bi-plus-lg"></i>ADD NEW ACCOUNT</a></button>
 </div>
 
 

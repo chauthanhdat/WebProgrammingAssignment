@@ -84,7 +84,7 @@ if (!isset($_SESSION['Login']) || ($_SESSION['UserAdmin'] == false)) {
             <div class="form-group">
               <label class="col-lg-3 control-label">Điện thoại:</label>
               <div class="col-lg-12">
-                <input name="con_phone_num" id="con_phone_num" type="text" value=<?php echo $con_phone ?> >
+                <input name="con_phone_num" id="con_phone_num" class="form-control" type="text" value=<?php echo $con_phone ?> >
               </div>
             </div>
             <div class="form-group">
