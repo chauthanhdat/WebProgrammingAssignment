@@ -455,6 +455,18 @@
         vertical-align: middle;
     }
     
+    .cart-title {
+        text-decoration: none;
+        color: #141414!important;
+        font-weight: 700;
+    }
+    
+    .media-body a.cart-title:hover,
+    .media-body a.cart-title:visited {
+        color: #FF2033!important;
+        text-decoration: none;
+    }
+    
     .cart-img {
         width: 40px!important;
     }
@@ -469,14 +481,4 @@
         .cart-img {
             width: 250px!important;
         }
-    }
-    
-    .cart-title {
-        text-decoration: none;
-        color: #141414;
-        font-weight: 700;
-    }
-    
-    .cart-title:hover {
-        text-decoration: underline;
     }
