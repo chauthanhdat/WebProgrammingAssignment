@@ -18,7 +18,7 @@
   <body>
   <nav class="navbar navbar-expand bg-dark navbar-dark">
         <div class="container-fluid">
-        <a class="navbar-brand " href="index.php"><img src="images/product/logo-fitfood.png" alt="fitfood" /></a>
+        <a class="navbar-brand " href="#"><img src="images/product/logo-fitfood.png" alt="fitfood" /></a>
           <!-- cần thêm mục nav trái vào thì gỡ comment -->
           <!-- 
              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar" aria-controls="collapsibleNavbar" aria-expanded="false" aria-label="Toggle navigation">

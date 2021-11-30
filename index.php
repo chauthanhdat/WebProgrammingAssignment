@@ -64,7 +64,24 @@ include './inc/header.php';
 
 ?>
 
-
+<?php 
+  function autoChangeFoodLing(){
+    $rannum=rand(1,4);
+    $rannum=$rannum%4;
+    if($rannum==1){
+      echo "./products/fit1.php";
+    }
+    else if($rannum==2){
+      echo "./products/fit2.php";
+    }
+    else if($rannum==3){
+      echo "./products/fit3.php";
+    }
+    else{
+      echo "./products/fitfull.php";
+    }
+  }
+?>
 
 <div class="main" role="main">
 
@@ -84,7 +101,7 @@ include './inc/header.php';
                         <h1 class="title title-center">
                             <small>Kế hoạch bữa ăn hàng tuần cho </small> một lối sống lành mạnh
                         </h1>
-                        <a href="./products/healthy.php" class="btn btn-danger">Đặt Ngay</a>
+                        <a href="<?php autoChangeFoodLing()?>" class="btn btn-danger">Đặt Ngay</a>
                     </div>
                 </div>
             </div>
@@ -95,7 +112,7 @@ include './inc/header.php';
                         <h1 class="title title-center">
                             Trải nghiệm bữa ăn sạch <small>tươi ngon giàu dinh dưỡng</small>
                         </h1>
-                        <a href="./products/burger.php" class="btn btn-danger">Đặt Ngay</a>
+                        <a href="<?php autoChangeFoodLing()?>" class="btn btn-danger">Đặt Ngay</a>
                     </div>
                 </div>
             </div>
@@ -201,7 +218,7 @@ include './inc/header.php';
             <div class="products">
                 <ul class="bxslider">
                     <li>
-                        <a href="https://fitfood.vn/product/full" class="link">
+                        <a href="./products/fitfull.php" class="link">
                             <div class="card">                            
                                 <img src="images/product/500x315/full.jpg" class="card-img-top" alt="">
                                 <div class="card-body">

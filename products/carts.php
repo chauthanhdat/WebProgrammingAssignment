@@ -54,41 +54,6 @@ if (!isset($_SESSION['Login']) || $_SESSION['Login'] == false) {
 
   <!--kết nối đến DB kiểm tra giỏ hàng xem có rỗng hay không, nếu có thì sâu rỗng nếu không thì sâu ko rỗng-->
   <?php
-  $dbservername = "localhost";
-  $dbusername = "root";
-  $dbname = "fitfooddb";
-  $connection = mysqli_connect($dbservername, $dbusername, "", $dbname);
-  if (!$connection) {
-    echo "kết nối với csdl thất bại: " . mysqli_connect_error();
-    exit;
-  }
-
-  $user_id = $_SESSION['Id'];
-  $sql_query = "SELECT `cart_id`,`cart_price` FROM `cart` WHERE `cart_ur_id`= $user_id AND `cart_delivered`= 0;";
-  //echo "<br><br><br><h1>$sql_query</h1>";
-  $query_result = mysqli_query($connection, $sql_query);
-  $num_of_cart_not_delivery = mysqli_num_rows($query_result);
-  $cart_info = [];
-  if ($num_of_cart_not_delivery > 0) {
-    while ($row = mysqli_fetch_assoc($query_result)) {
-      $cart_info['cart_id'] = $row['cart_id'];
-      $cart_info['cart_price'] = $row['cart_price'];
-    }
-    $cart_info['cart_ur_id'] = $_SESSION['Id'];
-  }
-
-  // Close connection
-  mysqli_close($connection);
-  ?>
-
-
-  <?php
-  //khi submit form chinh so luong san phan
-  if (isset($_POST['change_num_it'])) {
-    $temp_cart_id = $_POST['cart-id-hd'];
-    $temp_ur_id = $_SESSION['Id'];
-
-
     $dbservername = "localhost";
     $dbusername = "root";
     $dbname = "fitfooddb";
@@ -97,29 +62,64 @@ if (!isset($_SESSION['Login']) || $_SESSION['Login'] == false) {
       echo "kết nối với csdl thất bại: " . mysqli_connect_error();
       exit;
     }
-    $temp_num_row = sizeof($_SESSION['food_list']);
-    //echo "<h1><br><br>$temp_num_row</h1>";
-    //echo "<h1><br><br><br><br>$temp_cart_id</h1>";
-    for ($i = 0; $i < $temp_num_row; $i++) {
-      //echo "<h1><br><br><br><br>{$_SESSION['food_list'][1]}</h1>";
-      $temp = $_SESSION['food_list'][$i];
-      $temp_food=$temp;
-      //  echo "<h1><br><br><br><br>$temp</h1>";
-      //echo "<h1><br><br><br><br>$_POST[$temp]</h1>";
-      //echo "<h1>-- $temp</h1>";
-      $temp=str_replace(" ","_",$temp) ;
-      //echo "<h1>++ $temp</h1>";
-      $temp_num = $_POST[$temp];
-      $sql_query = "UPDATE `cart_it` set `num`= $temp_num where crt_id= $temp_cart_id and fd_name ='$temp_food';";
-      //echo $sql_query;
-      $query_result = mysqli_query($connection, $sql_query);
+
+    $user_id = $_SESSION['Id'];
+    $sql_query = "SELECT `cart_id`,`cart_price` FROM `cart` WHERE `cart_ur_id`= $user_id AND `cart_delivered`= 0;";
+    //echo "<br><br><br><h1>$sql_query</h1>";
+    $query_result = mysqli_query($connection, $sql_query);
+    $num_of_cart_not_delivery = mysqli_num_rows($query_result);
+    $cart_info = [];
+    if ($num_of_cart_not_delivery > 0) {
+      while ($row = mysqli_fetch_assoc($query_result)) {
+        $cart_info['cart_id'] = $row['cart_id'];
+        $cart_info['cart_price'] = $row['cart_price'];
+      }
+      $cart_info['cart_ur_id'] = $_SESSION['Id'];
     }
 
-    unset($_POST['change_num_it']);
-    //unset($_POST['cart-id-hd']);
-
+    // Close connection
     mysqli_close($connection);
-  }
+  ?>
+
+
+  <?php
+  //khi submit form chinh so luong san phan
+    if (isset($_POST['change_num_it'])) {
+      $temp_cart_id = $_POST['cart-id-hd'];
+      $temp_ur_id = $_SESSION['Id'];
+
+
+      $dbservername = "localhost";
+      $dbusername = "root";
+      $dbname = "fitfooddb";
+      $connection = mysqli_connect($dbservername, $dbusername, "", $dbname);
+      if (!$connection) {
+        echo "kết nối với csdl thất bại: " . mysqli_connect_error();
+        exit;
+      }
+      $temp_num_row = sizeof($_SESSION['food_list']);
+      //echo "<h1><br><br>$temp_num_row</h1>";
+      //echo "<h1><br><br><br><br>$temp_cart_id</h1>";
+      for ($i = 0; $i < $temp_num_row; $i++) {
+        //echo "<h1><br><br><br><br>{$_SESSION['food_list'][1]}</h1>";
+        $temp = $_SESSION['food_list'][$i];
+        $temp_food=$temp;
+        //  echo "<h1><br><br><br><br>$temp</h1>";
+        //echo "<h1><br><br><br><br>$_POST[$temp]</h1>";
+        //echo "<h1>-- $temp</h1>";
+        $temp=str_replace(" ","_",$temp) ;
+        //echo "<h1>++ $temp</h1>";
+        $temp_num = $_POST[$temp];
+        $sql_query = "UPDATE `cart_it` set `num`= $temp_num where crt_id= $temp_cart_id and fd_name ='$temp_food';";
+        //echo $sql_query;
+        $query_result = mysqli_query($connection, $sql_query);
+      }
+
+      unset($_POST['change_num_it']);
+      //unset($_POST['cart-id-hd']);
+
+      mysqli_close($connection);
+    }
 
   ?>
 
@@ -262,8 +262,8 @@ if (!isset($_SESSION['Login']) || $_SESSION['Login'] == false) {
                           <td class='text-right font-weight-semibold align-middle p-4 text-danger' >" . ($row['food_price'] * $row['num']) . "VND</td>
                           <td class='text-center align-middle px-0'>
                             <form action='' method='post'  name='delete_it' id='delete_it'>
-                              <input type='hidden' id='delete-cart-id-hidden' name='delete_cart_id_it' value='" . $cart_info['cart_id'] . "'>
-                              <input type='hidden' id='delete-cart-name-hidden' name='delete_cart_name_it' value='" . str_replace(" ","_",$row['fd_name']) ."'>
+                              <input type='hidden' id='delete-cart-id-hidden-".$row['fd_id']."' name='delete_cart_id_it' value='" . $cart_info['cart_id'] . "'>
+                              <input type='hidden' id='delete-cart-name-hidden-".$row['fd_id']."' name='delete_cart_name_it' value='" . str_replace(" ","_",$row['fd_name']) ."'>
                               <button type='submit' class='btn btn-lg btn-danger'  name='delete_it_bt' >Xóa</button>
                             </form>
                           </td>

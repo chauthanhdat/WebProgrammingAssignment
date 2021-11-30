@@ -12,11 +12,48 @@ if (!isset($_SESSION['Login']) || ($_SESSION['UserAdmin'] == false)) {
 ?>
 
 
+<?php
+
+    $dbservername = "localhost";
+    $dbusername = "root";
+    $dbname = "fitfooddb";
+    $loginsuccess = false;
+    $connection = mysqli_connect($dbservername, $dbusername, "", $dbname);
+    if (!$connection) {
+        echo "kết nối với csdl thất bại: " . mysqli_connect_error();
+        exit;
+    }
+    
+    if(count($_POST)>0)
+    {
+      $sql_query="UPDATE contact_address SET `con_address`= '{$_POST['con_add'] }',con_phone= '{$_POST['con_phone_num']}',con_email= '{$_POST['con_mail']}' where 1; ";
+      mysqli_query($connection,$sql_query);
+    }
+
+    $sql_query = "SELECT con_address, con_phone, con_email FROM contact_address";
+    $query_result = mysqli_query($connection, $sql_query);
+    
+    while ($row = mysqli_fetch_assoc($query_result)) {
+        $con_address=$row['con_address'];
+        $con_phone=$row['con_phone'];
+        $con_email=$row['con_email'];
+    }
+
+
+
+
+
+
+
+    mysqli_close($connection);
+?>
+
+
 <!doctype html>
 <html lang="en">
 
 <head>
-  <title>Contact</title>
+  <title>login-form</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -34,28 +71,32 @@ if (!isset($_SESSION['Login']) || ($_SESSION['UserAdmin'] == false)) {
       ?>
       <div class="col-9 py-5 py-5">
         <!--Place content here-->
-        <div class="container">
-          <h2 class="title">Sửa những thông tin trên footer</h2>
-          <form class="form-horizontal" role="form">
+        <div class="container mt-3">
+          <h2 class="title">Chỉnh sửa thông tin liên hệ</h2>
+          
+          <form action="contact.php" method="post" class="form-horizontal" role="form">
             <div class="form-group">
-              <label class="col-lg-3 control-label">Địa chỉ:</label>
+              <label class="col-lg-3 control-label" for="con_add">Địa chỉ:</label>
               <div class="col-lg-12">
-                <input class="form-control" type="text" value=" 33 Đường 14, KDC Bình Hưng, Ấp 2, Huyện Bình Chánh, TPHCM">
+                <input name="con_add" id="con_add" class="form-control" type="text" value="<?php echo ($con_address); ?>" >
               </div>
             </div>
             <div class="form-group">
               <label class="col-lg-3 control-label">Điện thoại:</label>
               <div class="col-lg-12">
-                <input class="form-control" type="text" value="(+84) 932 788 120 [hotline] - (+84) 938 074 120 [sms]">
+                <input name="con_phone_num" id="con_phone_num" class="form-control" type="text" value="<?php echo ($con_phone);?>">
+                
+                
               </div>
             </div>
             <div class="form-group">
-              <label class="col-lg-3 control-label">Email:</label>
+              <label  class="col-lg-3 control-label">Email:</label>
               <div class="col-lg-12">
-                <input class="form-control" type="text" value="Email info@fitfood.vn. For business inquiries: business@fitfood.vn">
+                <input name="con_mail" id="con_mail" class="form-control" type="text" value="<?php echo $con_email; ?>"" >
               </div>
             </div>
-
+            <input type="submit" value="Lưu thông tin" class="btn btn-success">
+          </form>
         </div>
 
         <!--End content -->
