@@ -1,5 +1,8 @@
 <?php
-include './inc/header.php'
+session_start();
+?>
+<?php
+include('article_header.php');
 ?>
 
 <div class="main">
@@ -10,7 +13,7 @@ include './inc/header.php'
                     <h1 class="title pb-4 mb-5">Tin tức</h1>
                     <h2 class="sub-title">Fitfood VN hợp tác cùng H&amp;H Nutrition ra mắt &quot;Gói tư vấn dinh
                         dưỡng chuyên sâu&quot;</h2>
-                    <div class="entry-meta mb-4">20/11/2020 By <a href="/">Fitfood</a></div>
+                    <div class="entry-meta mb-4">20/11/2020 By <a class="text-danger"href="/">Fitfood</a></div>
                     <div class="entry-content mb-4">
                         <p>Cơ thể mỗi người khỏe mạnh l&agrave; sự c&acirc;n bằng. Trong qu&aacute; tr&igrave;nh
                             sống v&agrave; sinh hoạt v&ocirc; t&igrave;nh hay cố &yacute; ch&uacute;ng ta đ&atilde;
@@ -36,7 +39,7 @@ include './inc/header.php'
                             h&agrave;ng, Fitfood VN kết hợp c&ugrave;ng H&amp;H Nutrition ra mắt &quot;G&oacute;i tư
                             vấn dinh dưỡng chuy&ecirc;n s&acirc;u&quot;.&nbsp;</p>
 
-                        <p><img class="img-fluid" alt="" src="images/product/article/FitfoodxHH.jpg" /></p>
+                        <p><img class="img-fluid" alt="" src="/images/product/article/FitfoodxHH.jpg" /></p>
 
                         <h2><strong>G&oacute;i tư vấn dinh dưỡng chuy&ecirc;n s&acirc;u gồm c&aacute;c dịch vụ
                                 g&igrave;?</strong></h2>
@@ -83,5 +86,5 @@ include './inc/header.php'
 </div>
 
 <?php
-include './inc/footer.php'
+include('article_footer.php');
 ?>
