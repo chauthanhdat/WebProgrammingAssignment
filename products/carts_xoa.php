@@ -75,12 +75,13 @@
     //echo "<h1><br><br><br><br>$temp_cart_id</h1>";
     for ($i=0; $i < $temp_num_row; $i++) { 
       //echo "<h1><br><br><br><br>{$_SESSION['food_list'][1]}</h1>";
-      $temp=$_SESSION['food_list'][$i];
-      //  echo "<h1><br><br><br><br>$temp</h1>";
+      $temp=$_SESSION['food_list'][$i][1];
+      $temp_id=$_SESSION['food_list'][$i][0];
+       //echo "<h1><br><br><br><br>$temp</h1>";
       // echo "<h1><br><br><br><br>$_POST[$temp]</h1>";
       $temp_num=$_POST[$temp];
       
-      $sql_query = "UPDATE `cart_it` set `num`= $temp_num where crt_id= $temp_cart_id and fd_name ='$temp';";
+      $sql_query = "UPDATE `cart_it` set `num`= $temp_num where crt_id= $temp_cart_id and fd_id =$$temp_id;";
       $query_result = mysqli_query($connection, $sql_query);
     }
 
@@ -260,11 +261,13 @@
                       $query_result = mysqli_query($connection, $sql_query);
                       if(mysqli_num_rows($query_result)>0){
                         $i=1;
-                        $_SESSION['food_list']=array();
+                        $_SESSION['food_list']=array(array());
                         echo "<form action='' method='post'  name='confirm_cart' id='confirm_cart'></form>";
                         while ($row = mysqli_fetch_assoc($query_result)) {
                           $price_cart=$row['cart_price'];
-                          $_SESSION['food_list'][$i-1]=$row['fd_name'];
+                          $_SESSION['food_list'][$i-1];//=array();
+                          $_SESSION['food_list'][$i-1][0]=$row['fd_id'];
+                          $_SESSION['food_list'][$i-1][1]=$row['fd_name'];
                           echo "                          
                         <tr>
                           <td class='p-4 '>
