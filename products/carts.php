@@ -255,6 +255,7 @@
                           echo "kết nối với csdl thất bại: " . mysqli_connect_error();
                           exit;
                       }
+                      
 
                       $sql_query = "SELECT fd_id ,crt_id ,fd_name ,num,food_price,cart_price FROM cart_it,food,cart where crt_id = {$cart_info['cart_id']} and fd_id=food_id and crt_id=cart_id ;";
                       $query_result = mysqli_query($connection, $sql_query);
