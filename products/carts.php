@@ -25,6 +25,35 @@
 
 <?php }else{  //da dang nhap ?>
 
+
+  <?php 
+      // xoa item trong cart
+      if(isset($_POST['delete_it_bt'])){
+        $dbservername = "localhost";
+        $dbusername = "root";
+        $dbname = "fitfooddb";
+        $connection = mysqli_connect($dbservername, $dbusername, "", $dbname);
+        if (!$connection) {
+            echo "kết nối với csdl thất bại: " . mysqli_connect_error();
+            exit;
+        }
+        $temp_cart_id=$_POST['delete_cart_id_it'];
+        $temp_food_name=$_POST['delete_cart_name_it'];
+        // echo "<h1><br><br>$temp_cart_id</h1>";
+        // echo "<h1><<br>$temp_food_name</h1>";
+        $sql_query =" DELETE FROM `cart_it` WHERE `crt_id` = $temp_cart_id and `fd_name`= '$temp_food_name';";
+        // echo "<h1><<br>$sql_query</h1>";
+        $query_result = mysqli_query($connection, $sql_query);
+
+        unset($_POST['delete_it_bt']);
+        mysqli_close($connection);
+
+      }
+?>
+
+
+
+
   <!--kết nối đến DB kiểm tra giỏ hàng xem có rỗng hay không, nếu có thì sâu rỗng nếu không thì sâu ko rỗng-->
 <?php
     $dbservername = "localhost";
@@ -94,30 +123,11 @@
 ?>
 
 
-<?php 
-      // xoa item trong cart
-      if(isset($_POST['delete_it_bt'])){
-        $dbservername = "localhost";
-        $dbusername = "root";
-        $dbname = "fitfooddb";
-        $connection = mysqli_connect($dbservername, $dbusername, "", $dbname);
-        if (!$connection) {
-            echo "kết nối với csdl thất bại: " . mysqli_connect_error();
-            exit;
-        }
-        $temp_cart_id=$_POST['delete_cart_id_it'];
-        $temp_food_name=$_POST['delete_cart_name_it'];
-        // echo "<h1><br><br>$temp_cart_id</h1>";
-        // echo "<h1><<br>$temp_food_name</h1>";
-        $sql_query =" DELETE FROM `cart_it` WHERE `crt_id` = $temp_cart_id and `fd_name`= '$temp_food_name';";
-        // echo "<h1><<br>$sql_query</h1>";
-        $query_result = mysqli_query($connection, $sql_query);
 
-        unset($_POST['delete_it_bt']);
-        mysqli_close($connection);
 
-      }
-?>
+
+
+
 
 <?php 
     function get_food_link($food_name){
@@ -223,6 +233,7 @@
     }
 ?>
 
+
       <?php if($num_of_cart_not_delivery>0){?>
         
           <!-- có dữ liệu  -->
@@ -255,7 +266,7 @@
                           echo "kết nối với csdl thất bại: " . mysqli_connect_error();
                           exit;
                       }
-                      
+
 
                       $sql_query = "SELECT fd_id ,crt_id ,fd_name ,num,food_price,cart_price FROM cart_it,food,cart where crt_id = {$cart_info['cart_id']} and fd_id=food_id and crt_id=cart_id ;";
                       $query_result = mysqli_query($connection, $sql_query);
