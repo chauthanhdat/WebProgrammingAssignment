@@ -110,9 +110,11 @@
                     trải nghiệm khác biệt khi dùng sản phẩm Cookie đặc biệt của chúng tôi.</p>
                     <p> <i></i></p>
                 </div>
+
                 <form action="<?php echo $_SERVER["PHP_SELF"]; ?>" method="post" name='add-to-cart' name="add-to-cart" onsubmit="return check_login()">
                 <button type="submit" class="btn btn-danger" name="submit" >Thêm vào giỏ hàng</button>
                 </form>
+                
             </div>
         </div>
     </div>

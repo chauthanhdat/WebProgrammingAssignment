@@ -16,9 +16,9 @@
             <?php
             include './inc/sidebar_admin.php'
             ?>
-            <div class="col py-3">
+            <div class="col-9 py-5 px-5">
                 <!--Place content here-->
-                <h2>có thể thay đổi các bài viết</h2>
+                <h2 class="title">có thể thay đổi các bài viết</h2>
                 <!--End content -->
             </div>
         </div>

@@ -153,7 +153,7 @@
                </div>
 
                <div class="col-md-4">
-                   <a href="https://fitfood.vn/product/1/fitfood-juice-sweetie" class="link" style="text-decoration: none">
+                   <a href="./banhquy.php" class="link" style="text-decoration: none">
                        <div class="card">
                            <img src="https://fitfood.vn/img/500x315/images/fit-snacks-500x315-2-15777698786894.jpg" class="card-img-top" alt="">
                            <div class="card-body">
@@ -180,7 +180,7 @@
                <div class="products">
                    <ul class="bxslider">
                        <li>
-                           <a href="https://fitfood.vn/product/full" class="link"style="text-decoration: none">
+                           <a href="./fitfull.php" class="link"style="text-decoration: none">
                                <div class="card">
                                    <img src="../images/product/500x315/full.jpg" class="card-img-top" alt="">
                                    <div class="card-body">
@@ -196,7 +196,7 @@
                        </li>
 
                        <li>
-                           <a href="https://fitfood.vn/product/fit3" class="link"style="text-decoration: none">
+                           <a href="./fit3.php" class="link"style="text-decoration: none">
                                <div class="card">
                                    <img src="../images/product/500x315/fit3.jpg" class="card-img-top" alt="">
                                    <div class="card-body">
@@ -213,7 +213,7 @@
                        </li>
 
                        <li>
-                           <a href="https://fitfood.vn/product/fit1"  class="link">
+                           <a href="./fit1.php"  class="link">
                                
                                <div class="card">
                                    <img src="../images/product/500x315/fit1.jpg" class="card-img-top" alt="">
@@ -231,7 +231,7 @@
                        </li>
 
                        <li>
-                           <a href="https://fitfood.vn/product/fit2" class="link">
+                           <a href="./fit2.php" class="link">
                                
                                <div class="card">
                                    <img src="../images/product/500x315/fit2.jpg" class="card-img-top" alt="">
@@ -334,10 +334,10 @@
                 <div class="col-md-3 mb-3">
                     <h4>Điều khoản chung</h4>
                     <ul>
-                        <li><a href="#">Chính Sách Quy Định Chung</a></li>
-                        <li><a href="#">Quy Định Hình Thức Thanh Toán</a></li>
-                        <li><a href="#">Chính Sách Vận Chuyển Giao Hàng</a></li>
-                        <li><a href="#">Chính Sách Bảo Mật Thông Tin</a></li>
+                    <li><a href="../article/term.php">Chính Sách Quy Định Chung</a></li>
+                        <li><a href="../article/term.php">Quy Định Hình Thức Thanh Toán</a></li>
+                        <li><a href="../article/term.php">Chính Sách Vận Chuyển Giao Hàng</a></li>
+                        <li><a href="../article/term.php">Chính Sách Bảo Mật Thông Tin</a></li>
                     </ul>
                 </div>
                 <div class="col-md-3 mb-3">

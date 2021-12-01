@@ -1,5 +1,11 @@
 <?php
 session_start();
+
+if (isset($_SESSION['Login'])&&($_SESSION['Login']==true)){
+    echo "<script type='text/javascript'>
+    window.location.href = './index.php';
+    </script>";
+}
 if (!isset($_SESSION['Login'])||$_SESSION['Login']==false) {
     $_SESSION['Login'] = false;
 }

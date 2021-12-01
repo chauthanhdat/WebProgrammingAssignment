@@ -4,8 +4,13 @@
     <title>adminPage</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/adminPage.css" rel="stylesheet">
+    <meta name="lang" content="vi">
+    <link rel="icon" href="/images/product/favicon.ico">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+    <link href="fonts/Montserrat.css" rel="stylesheet">
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
     <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet"> -->
     <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"> -->
     
@@ -13,7 +18,7 @@
   <body>
   <nav class="navbar navbar-expand bg-dark navbar-dark">
         <div class="container-fluid">
-        <a class="navbar-brand " href="index.php"><img src="images/product/logo-fitfood.png" alt="fitfood" /></a>
+        <a class="navbar-brand " href="#"><img src="images/product/logo-fitfood.png" alt="fitfood" /></a>
           <!-- cần thêm mục nav trái vào thì gỡ comment -->
           <!-- 
              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar" aria-controls="collapsibleNavbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -53,10 +58,11 @@
             </li> -->
             <li class="nav-item dropdown ">
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
-                    <img alt="admin avartar" src="https://1.bp.blogspot.com/-TuCsF01fE2M/XroLo8YnPeI/AAAAAAAAlhk/szLN8QjJ918lHUB848AdNqfe36VuN0gtQCLcBGAsYHQ/s1600/hinh-nen-de-thuong-mau-hong-pink-anime-girl.png" width="50px" height="50px">
+                    <img alt="admin avartar" src="https://i.pinimg.com/originals/08/3c/f7/083cf7ceb6fc8d817aba967bd8ce3b8e.png" width="50px" height="50px">
                 </a>
                 <ul class="dropdown-menu bg-dark navbar-dark">
-                  <li><a class="dropdown-item" href="index.php">Log out</a></li>
+                  <li><a class="dropdown-item" href="index.php">log out</a></li>
+                  
                 </ul>
             </li>
             <!-- <li class="nav-item dropdown">

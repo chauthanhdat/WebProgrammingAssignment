@@ -56,9 +56,7 @@ session_start();
     <link rel="stylesheet" href="./../css/jquery.bxslider.min.css">
     <link rel="stylesheet" href="./../css/bootstrap.min.css">
     <link rel="stylesheet" href="./../css/style.css">
-
-
-</head>
+    </head>
 
 <body>
     <nav class="navbar navbar-expand-xl navbar-dark bg-dark fixed-top">
@@ -66,7 +64,7 @@ session_start();
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-navigation" aria-controls="main-navigation" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <a class="navbar-brand " href="index.php"><img src="./../images/product/logo-fitfood.png" alt="" /></a>
+            <a class="navbar-brand " href="../index.php"><img src="./../images/product/logo-fitfood.png" alt="" /></a>
 
 
             <div class="collapse navbar-collapse " id="main-navigation">
@@ -110,18 +108,17 @@ echo "<ul class='nav navbar-nav navbar-sub flex-row order-1 order-xl-0 '>
                <img src='https://s3.eu-central-1.amazonaws.com/bootstrapbaymisc/blog/24_days_bootstrap/fox.jpg' width='40' height='40' class='rounded-circle'>
             </a>
 
-            <ul class='dropdown-menu' aria-labelledby='dropdownMenuLink'>
-                <li><a class='dropdown-item' href='#'>Action</a></li>
-                <li><a class='dropdown-item' href='#'>Another action</a></li>
-                <li><hr class='dropdown-divider'></li>
-                <li><form method='post' action='../index.php'>
-                 <input type='submit' name='Logout'     value='Đăng xuất'/>
-                </form>
+            <ul class='dropdown-menu bg-dark' aria-labelledby='dropdownMenuLink'>
+                            <li><a class='dropdown-item' href='#'>Action</a></li>
+                            <li><a class='dropdown-item' href='#'>Another action</a></li>
+                            <li><form method='post' action='../index.php'>
+                             <input class='mx-3 text-dark btn-danger'type='submit' name='Logout'     value='Đăng xuất'/>
+                            </form>
+                            </li>
+                        </ul>
+                    </div>
                 </li>
-            </ul>
-        </div>
-    </li>
-</ul>";
+            </ul>";
 }else{
 
 echo "<ul class='nav navbar-nav navbar-sub order-1 order-xl-0 '>                
