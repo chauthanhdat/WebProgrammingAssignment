@@ -35,6 +35,7 @@
         $result=mysqli_query($connection,$add_user);    
         unset($_POST['submit']);
         mysqli_close($connection);
+        header("Location: ./user_info.php");
     }
   ?>
 

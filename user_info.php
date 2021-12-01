@@ -24,7 +24,7 @@ session_start();
     $user_id_delete=$_POST['delete_user_acc'];
     
     
-    $sql_query ="DELETE FROM `users` WHERE `ur_id` = $user_id_delete;";
+    $sql_query ="DELETE FROM `users` WHERE `ur_id` = {$user_id_delete};";
     //echo "<h1>$sql_query </h1>";
     $query_result = mysqli_query($connection, $sql_query);
 

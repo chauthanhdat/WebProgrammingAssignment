@@ -4,7 +4,7 @@ session_start();
 ?>
 
 <?php 
-if(isset($_POST['change_price_fit1_bt'])){
+    if(isset($_POST['change_price_fit1_bt'])){
     $dbservername = "localhost";
     $dbusername = "root";
     $dbname = "fitfooddb";
@@ -139,12 +139,140 @@ if(isset($_POST['change_price_fit1_bt'])){
 
   }
 
+  
 
+  if(isset($_POST['change_price_cookie_bt'])){
+    $dbservername = "localhost";
+    $dbusername = "root";
+    $dbname = "fitfooddb";
+    $connection = mysqli_connect($dbservername, $dbusername, "", $dbname);
+    if (!$connection) {
+        echo "kết nối với csdl thất bại: " . mysqli_connect_error();
+        exit;
+    }
+    $price=$_POST['fit_price'];
+    
+    
+    $sql_query ="UPDATE `food` SET `food_price`=$price WHERE `food_name`= 'BANH QUY';";
+    //echo "<h1>$sql_query </h1>";
+    $query_result = mysqli_query($connection, $sql_query);
 
+    unset($_POST['change_price_cookie_bt']);
+    mysqli_close($connection);
+
+  }  
+
+  if(isset($_POST['change_price_fit3_bt'])){
+    $dbservername = "localhost";
+    $dbusername = "root";
+    $dbname = "fitfooddb";
+    $connection = mysqli_connect($dbservername, $dbusername, "", $dbname);
+    if (!$connection) {
+        echo "kết nối với csdl thất bại: " . mysqli_connect_error();
+        exit;
+    }
+    $price=$_POST['fit_price'];
+    
+    
+    $sql_query ="UPDATE `food` SET `food_price`=$price WHERE `food_name`= 'GOI FIT 3';";
+    //echo "<h1>$sql_query </h1>";
+    $query_result = mysqli_query($connection, $sql_query);
+
+    unset($_POST['change_price_fit3_bt']);
+    mysqli_close($connection);
+
+  }
+
+  if(isset($_POST['change_price_boxchicken_bt'])){
+    $dbservername = "localhost";
+    $dbusername = "root";
+    $dbname = "fitfooddb";
+    $connection = mysqli_connect($dbservername, $dbusername, "", $dbname);
+    if (!$connection) {
+        echo "kết nối với csdl thất bại: " . mysqli_connect_error();
+        exit;
+    }
+    $price=$_POST['fit_price'];
+    
+    
+    $sql_query ="UPDATE `food` SET `food_price`=$price WHERE `food_name`= 'CHICKEN BOX';";
+    //echo "<h1>$sql_query </h1>";
+    $query_result = mysqli_query($connection, $sql_query);
+
+    unset($_POST['change_price_boxchicken_bt']);
+    mysqli_close($connection);
+
+  }
+
+  if(isset($_POST['change_price_greenie_bt'])){
+    $dbservername = "localhost";
+    $dbusername = "root";
+    $dbname = "fitfooddb";
+    $connection = mysqli_connect($dbservername, $dbusername, "", $dbname);
+    if (!$connection) {
+        echo "kết nối với csdl thất bại: " . mysqli_connect_error();
+        exit;
+    }
+    $price=$_POST['fit_price'];
+    
+    
+    $sql_query ="UPDATE `food` SET `food_price`=$price WHERE `food_name`= 'GREENIE';";
+    //echo "<h1>$sql_query </h1>";
+    $query_result = mysqli_query($connection, $sql_query);
+
+    unset($_POST['change_price_greenie_bt']);
+    mysqli_close($connection);
+
+  }
+
+  
+
+  if(isset($_POST['change_price_KOMBUCHA_bt'])){
+    $dbservername = "localhost";
+    $dbusername = "root";
+    $dbname = "fitfooddb";
+    $connection = mysqli_connect($dbservername, $dbusername, "", $dbname);
+    if (!$connection) {
+        echo "kết nối với csdl thất bại: " . mysqli_connect_error();
+        exit;
+    }
+    $price=$_POST['fit_price'];
+    
+    
+    $sql_query ="UPDATE `food` SET `food_price`=$price WHERE `food_name`= 'KOMBUCHA';";
+    //echo "<h1>$sql_query </h1>";
+    $query_result = mysqli_query($connection, $sql_query);
+
+    unset($_POST['change_price_KOMBUCHA_bt']);
+    mysqli_close($connection);
+
+  }
+
+  if(isset($_POST['change_price_tempeh_bt'])){
+    $dbservername = "localhost";
+    $dbusername = "root";
+    $dbname = "fitfooddb";
+    $connection = mysqli_connect($dbservername, $dbusername, "", $dbname);
+    if (!$connection) {
+        echo "kết nối với csdl thất bại: " . mysqli_connect_error();
+        exit;
+    }
+    $price=$_POST['fit_price'];
+    
+    
+    $sql_query ="UPDATE `food` SET `food_price`=$price WHERE `food_name`= 'TEMPEH';";
+    //echo "<h1>$sql_query </h1>";
+    $query_result = mysqli_query($connection, $sql_query);
+
+    unset($_POST['change_price_tempeh_bt']);
+    mysqli_close($connection);
+
+  }
 
 
 
 ?>
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -159,9 +287,9 @@ if(isset($_POST['change_price_fit1_bt'])){
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
-<body>
-<?php
-    include './inc/header_admin.php'
+  <body>
+    <?php
+        include './inc/header_admin.php'
     ?>
     <div class="container-fluid">
         <div class="row flex-nowrap">
@@ -217,13 +345,50 @@ if(isset($_POST['change_price_fit1_bt'])){
                         <input type="text" form="change_price_veg" placeholder="nhap gia" name="fit_price">
                         <button type="submit" name="change_price_veg_bt" form="change_price_veg" class="btn btn-outline-dark ">đổi giá goi chay</button>
                 </li>
-                <li>...</li>
+
+                <li>
+                    <img src="images/product/500x315/cookie.jpg" >
+                    <form action="" method="post" id="change_price_cookie"> </form>
+                        <input type="text" form="change_price_cookie" placeholder="nhap gia" name="fit_price">
+                        <button type="submit" name="change_price_cookie_bt" form="change_price_cookie" class="btn btn-outline-dark ">đổi giá COOKIE</button>
+                </li>
+
+                <li>
+                    <img src="images/product/500x315/fit3.jpg" >
+                        <form action="" method="post" id="change_price_fit3"> </form>
+                            <input type="text" form="change_price_fit3" placeholder="nhap gia" name="fit_price">
+                            <button type="submit" name="change_price_fit3_bt" form="change_price_fit3" class="btn btn-outline-dark ">đổi giá COOKIE</button>
+                </li>
+
+                 <li>
+                    <img src="images/product/500x315/boxchiken.jpg" >
+                        <form action="" method="post" id="change_price_boxchicken"> </form>
+                            <input type="text" form="change_price_boxchicken" placeholder="nhap gia" name="fit_price">
+                            <button type="submit" name="change_price_boxchicken_bt" form="change_price_boxchicken" class="btn btn-outline-dark ">đổi giá COOKIE</button>
+                </li>
+
+                 <li>
+                    <img src="images/product/500x315/greenie.jpg" >
+                        <form action="" method="post" id="change_price_greenie"> </form>
+                            <input type="text" form="change_price_greenie" placeholder="nhap gia" name="fit_price">
+                            <button type="submit" name="change_price_greenie_bt" form="change_price_greenie" class="btn btn-outline-dark ">đổi giá COOKIE</button>
+                </li>
+
+                 <li>
+                    <img src="images/product/500x315/KOMBUCHA.jpg" >
+                        <form action="" method="post" id="change_price_KOMBUCHA"> </form>
+                            <input type="text" form="change_price_KOMBUCHA" placeholder="nhap gia" name="fit_price">
+                            <button type="submit" name="change_price_KOMBUCHA_bt" form="change_price_KOMBUCHA" class="btn btn-outline-dark ">đổi giá COOKIE</button>
+                </li>
+
+                <li>
+                    <img src="images/product/500x315/tempeh.jpg" >
+                        <form action="" method="post" id="change_price_tempeh"> </form>
+                            <input type="text" form="change_price_tempeh" placeholder="nhap gia" name="fit_price">
+                            <button type="submit" name="change_price_tempeh_bt" form="change_price_tempeh" class="btn btn-outline-dark ">đổi giá COOKIE</button>
+                </li>
+
                 </ul>
-
-
-
-
-
 
 
                 <!--End content -->

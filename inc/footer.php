@@ -1,3 +1,28 @@
+<?php
+
+    $dbservername = "localhost";
+    $dbusername = "root";
+    $dbname = "fitfooddb";
+    $loginsuccess = false;
+    $connection = mysqli_connect($dbservername, $dbusername, "", $dbname);
+    if (!$connection) {
+        echo "kết nối với csdl thất bại: " . mysqli_connect_error();
+        exit;
+    }
+    
+    $sql_query = "SELECT con_address, con_phone, con_email FROM contact_address";
+    $query_result = mysqli_query($connection, $sql_query);
+    
+    
+    while ($row = mysqli_fetch_assoc($query_result)) {
+        $con_address=$row['con_address'];
+        $con_phone=$row['con_phone'];
+        $con_email=$row['con_email'];
+    }
+    mysqli_close($connection);
+?>
+
+
 <div class="footer bg-dark">
     <div class="container-fluid ">
         <a href="index.php" class="mb-4 d-block">
@@ -8,9 +33,9 @@
                 <div class="col-md-6 mb-3">
                     <h4>Công ty TNHH Fitfood</h4>
                     <p>
-                        <strong>Địa chỉ</strong> 33 Đường 14, KDC Bình Hưng, Ấp 2, Huyện Bình Chánh, TPHCM<br />
-                        <strong>Điện thoại</strong> (+84) 932 788 120 [hotline] - (+84) 938 074 120 [sms]<br />
-                        <strong>Email</strong> info@fitfood.vn. For business inquiries:
+                        <strong>Địa chỉ</strong>  <?php echo $con_address ?> 33 Đường 14, KDC Bình Hưng, Ấp 2, Huyện Bình Chánh, TPHCM<br />
+                        <strong>Điện thoại</strong> <?php echo $con_phone ?> (+84) 932 788 120 [hotline] - (+84) 938 074 120 [sms]<br />
+                        <strong>Email</strong> <?php echo $con_email ?> info@fitfood.vn. For business inquiries:
                         business@fitfood.vn<br />
                         <strong>MST</strong> 0313272749 do Sở kế hoạch và đầu tư TPHCM cấp ngày 26/05/2015
                     </p>
